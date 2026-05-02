@@ -11,7 +11,6 @@ export default defineConfig({
       {
         text: "Technologies",
         items: [
-          { text: "JavaScript", link: "/javascript" },
           { text: "TypeScript", link: "/typescript" },
           { text: "Bun", link: "/bun" },
           { text: "Ionic", link: "/ionic" },

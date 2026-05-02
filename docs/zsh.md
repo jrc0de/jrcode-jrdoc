@@ -1,85 +1,31 @@
-# Markdown Extension Examples
+# Zsh
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+## Navigation
 
-## Syntax Highlighting
-
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+pwd # afficher le dossier courant
+ls # lister le contenu du dossier
+cd [path] # changer de répertoire
+cd - # revenir au dossier précédent
+cd .. # aller au dossier parent
 ```
 
-## Custom Containers
+## Fichiers & dossiers
 
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```bash
+mkdir [folder] # créer un dossier
+touch [file.ext] # créer un fichier
+rm [file.ext] # supprimer un fichier
+rm -rf [folder] # supprimer un dossier et son contenu (irréversible)
+tree # arborescence des dossiers
+tree /F # arborescence des dossiers et fichiers
 ```
 
-**Output**
+## Utilitaires
 
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+```bash
+code . # ouvrir VSCode dans le dossier actuel
+clear # vider la console (ou Ctrl+L)
+curl [url] # requête HTTP GET
+curl -o [file.ext] [url] # enregistrer la réponse dans un fichier
+```

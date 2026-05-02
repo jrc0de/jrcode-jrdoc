@@ -1,85 +1,39 @@
-# Markdown Extension Examples
+# Capacitor
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+## CLI
 
-## Syntax Highlighting
+#### Installer la dernière version du CLI Capacitor
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+bun add -g @capacitor/cli
 ```
 
-## Custom Containers
+#### Créer le projet Android natif
 
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```bash
+bunx cap add android
 ```
 
-**Output**
+#### Créer le projet iOS natif
 
-::: info
-This is an info box.
-:::
+```bash
+bunx cap add ios
+```
 
-::: tip
-This is a tip.
-:::
+#### Synchroniser les changements web vers les projets natifs
 
-::: warning
-This is a warning.
-:::
+```bash
+bunx cap sync
+```
 
-::: danger
-This is a dangerous warning.
-:::
+#### Ouvrir le projet Android dans Android Studio
 
-::: details
-This is a details block.
-:::
+```bash
+bunx cap open android
+```
 
-## More
+#### Ouvrir le projet iOS dans Xcode
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+```bash
+bunx cap open ios
+```

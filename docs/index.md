@@ -7,11 +7,6 @@ hero:
   text: "Documentation for web development"
 
 features:
-  - title: JavaScript
-    details: Multipurpose programming language.
-    link: /javascript
-    icon:
-      src: /img/javascript.svg
   - title: TypeScript
     details: JavaScript superset with syntax for types.
     link: /typescript

@@ -1,85 +1,38 @@
-# Markdown Extension Examples
+# Bun
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+## Commandes essentielles
 
-## Syntax Highlighting
-
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+bun -v # afficher la version
+bun upgrade # mettre à jour Bun vers la dernière version
+bun init # initialiser un nouveau projet
+bun install # installer les dépendances d'un projet
+bun i # alias de bun install
 ```
 
-## Custom Containers
+## Gestion des packages
 
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```bash
+bun add [package] # installer un package
+bun add [package] --dev # installer en dépendance de développement
+bun add [package] -d # alias de --dev
+bun remove [package] # désinstaller un package
+bun outdated # lister les packages obsolètes
+bun update # mettre à jour les packages (dans les limites de package.json)
+bun update --latest # mettre à jour en ignorant les contraintes de version
+bun add [package]@latest # installer ou forcer la dernière version d'un package
 ```
 
-**Output**
+## Exécution de scripts
 
-::: info
-This is an info box.
-:::
+```bash
+bun [script.js] # exécuter un script
+bunx [package] # exécuter un package sans l'installer
+```
 
-::: tip
-This is a tip.
-:::
+## Sécurité
 
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+```bash
+bun audit # scanner les vulnérabilités de sécurité
+bun audit fix # corriger les vulnérabilités de sécurité
+```

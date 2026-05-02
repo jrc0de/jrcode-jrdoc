@@ -1,85 +1,34 @@
-# Markdown Extension Examples
+# Git
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+## Initialisation
 
-## Syntax Highlighting
-
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+git init # Commencer un nouveau dépôt
+git clone <url> # Cloner un dépôt distant
 ```
 
-## Custom Containers
+## Synchronisation
 
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```bash
+git fetch # Récupérer les modifications du dépôt distant
+git pull # Récupérer et fusionner les modifications du dépôt distant
 ```
 
-**Output**
+## Annuler des commits
 
-::: info
-This is an info box.
-:::
+```bash
+git reset HEAD~x # Annuler les x derniers commits (garde les modifications)
+git reset --hard HEAD~x # Annuler les x derniers commits (supprime les modifications)
+git push --force # Forcer le push (écrase l'historique distant)
+```
 
-::: tip
-This is a tip.
-:::
+## Branches
 
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+```bash
+git branch # Afficher les branches locales
+git branch <name> # Créer une branche
+git checkout <name> # Changer de branche
+git merge <name> # Fusionner une branche (commit de fusion)
+git rebase <name> # Fusionner une branche (historique linéaire)
+git branch -d <name> # Supprimer une branche locale
+```
