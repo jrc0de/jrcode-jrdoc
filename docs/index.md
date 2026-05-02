@@ -9,38 +9,37 @@ hero:
 features:
   - title: JavaScript
     details: Multipurpose programming language.
-    link: /#
+    link: /javascript
     icon:
-      src: /javascript.svg
+      src: /img/javascript.svg
   - title: TypeScript
     details: JavaScript superset with syntax for types.
-    link: /#
+    link: /typescript
     icon:
-      src: /typescript.svg
+      src: /img/typescript.svg
   - title: Bun
     details: All in one JavaScript runtime and package manager.
-    link: /#
+    link: /bun
     icon:
-      src: /bun.svg
+      src: /img/bun.svg
   - title: Ionic
     details: The mobile SDK for the web.
-    link: /#
+    link: /ionic
     icon:
-      src: /ionic.svg
+      src: /img/ionic.svg
   - title: Capacitor
     details: Cross-platform native runtime for web apps.
-    link: /#
+    link: /capacitor
     icon:
-      src: /capacitor.svg
+      src: /img/capacitor.svg
   - title: Git
     details: Distributed version control manager.
-    link: /#
+    link: /git
     icon:
-      src: /git.svg
+      src: /img/git.svg
   - title: Zsh
     details: Unix shell designed for interactive use and scripting.
-    link: /#
+    link: /zsh
     icon:
-      src: /zsh.svg
+      src: /img/zsh.svg
 ---
-

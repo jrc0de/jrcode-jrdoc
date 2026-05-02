@@ -1,28 +1,27 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   title: "JRDoc",
   description: "Web dev doc",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
     sidebar: [
       {
-        text: 'Examples',
+        text: "Technologies",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "JavaScript", link: "/javascript" },
+          { text: "TypeScript", link: "/typescript" },
+          { text: "Bun", link: "/bun" },
+          { text: "Ionic", link: "/ionic" },
+          { text: "Capacitor", link: "/capacitor" },
+          { text: "Git", link: "/git" },
+          { text: "Zsh", link: "/zsh" },
+        ],
+      },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
+  },
+});
