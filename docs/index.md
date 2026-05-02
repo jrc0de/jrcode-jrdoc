@@ -4,36 +4,36 @@ layout: home
 
 hero:
   name: "JRDoc"
-  text: "Documentation for web development"
+  text: "Documentation pour le développement web"
 
 features:
   - title: TypeScript
-    details: JavaScript superset with syntax for types.
+    details: Superset de JavaScript avec une syntaxe pour les types.
     link: /typescript
     icon:
       src: /img/typescript.svg
   - title: Bun
-    details: All in one JavaScript runtime and package manager.
+    details: Runtime JavaScript et gestionnaire de paquets tout-en-un.
     link: /bun
     icon:
       src: /img/bun.svg
   - title: Ionic
-    details: The mobile SDK for the web.
+    details: Le SDK mobile pour le web.
     link: /ionic
     icon:
       src: /img/ionic.svg
   - title: Capacitor
-    details: Cross-platform native runtime for web apps.
+    details: Runtime natif multiplateforme pour les applications web.
     link: /capacitor
     icon:
       src: /img/capacitor.svg
   - title: Git
-    details: Distributed version control manager.
+    details: Gestionnaire de versions distribué.
     link: /git
     icon:
       src: /img/git.svg
   - title: Zsh
-    details: Unix shell designed for interactive use and scripting.
+    details: Shell Unix dérivé de Bash pour le terminal et les scripts.
     link: /zsh
     icon:
       src: /img/zsh.svg
