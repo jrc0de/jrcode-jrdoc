@@ -4,9 +4,9 @@
   "workspaces": {
     "": {
       "devDependencies": {
-        "oxfmt": "latest",
-        "oxlint": "latest",
-        "vitepress": "latest",
+        "oxfmt": "^0.48.0",
+        "oxlint": "^1.63.0",
+        "vitepress": "^1.6.4",
       },
     },
   },
