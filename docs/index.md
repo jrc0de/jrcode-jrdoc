@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "JRDoc"
   text: "Documentation pour le développement web"
+  image:
+    src: /img/logo.png
+    alt: JRDoc logo
 
 features:
   - title: JavaScript
