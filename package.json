@@ -9,8 +9,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "oxfmt": "^0.47.0",
-    "oxlint": "^1.62.0",
-    "vitepress": "^2.0.0-alpha.17"
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "vitepress": "^1.6.4"
   }
 }

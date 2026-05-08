@@ -7,31 +7,54 @@ hero:
   text: "Documentation pour le développement web"
 
 features:
+  - title: JavaScript
+    details: Langage de programmation dynamique pour le web côté client et serveur.
+    link: /javascript
+    icon:
+      src: /img/javascript.svg
+
   - title: TypeScript
     details: Superset de JavaScript avec une syntaxe pour les types.
     link: /typescript
     icon:
       src: /img/typescript.svg
+
+  - title: HTML
+    details: Langage de balisage structurant le contenu des pages web.
+    link: /html
+    icon:
+      src: /img/html.svg
+
+  - title: CSS
+    details: Langage de style pour la mise en forme et la mise en page des interfaces web.
+    link: /css
+    icon:
+      src: /img/css.svg
+
   - title: Bun
     details: Runtime JavaScript et gestionnaire de paquets tout-en-un.
     link: /bun
     icon:
       src: /img/bun.svg
+
   - title: Ionic
     details: Le SDK mobile pour le web.
     link: /ionic
     icon:
       src: /img/ionic.svg
+
   - title: Capacitor
     details: Runtime natif multiplateforme pour les applications web.
     link: /capacitor
     icon:
       src: /img/capacitor.svg
+
   - title: Git
     details: Gestionnaire de versions distribué.
     link: /git
     icon:
       src: /img/git.svg
+
   - title: Zsh
     details: Shell Unix dérivé de Bash pour le terminal et les scripts.
     link: /zsh
