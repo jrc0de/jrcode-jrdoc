@@ -26,7 +26,6 @@ export default defineConfig({
         text: "Technologies",
         items: [
           { text: "JavaScript", link: "/javascript" },
-          { text: "TypeScript", link: "/typescript" },
           { text: "HTML", link: "/html" },
           { text: "CSS", link: "/css" },
           { text: "Bun", link: "/bun" },

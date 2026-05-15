@@ -16,12 +16,6 @@ features:
     icon:
       src: /img/javascript.svg
 
-  - title: TypeScript
-    details: Superset de JavaScript avec une syntaxe pour les types.
-    link: /typescript
-    icon:
-      src: /img/typescript.svg
-
   - title: HTML
     details: Langage de balisage structurant le contenu des pages web.
     link: /html
