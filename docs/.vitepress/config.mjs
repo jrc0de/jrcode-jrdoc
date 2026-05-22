@@ -31,6 +31,7 @@ export default defineConfig({
           { text: "Bun", link: "/bun" },
           { text: "Ionic", link: "/ionic" },
           { text: "Capacitor", link: "/capacitor" },
+          { text: "VSCode", link: "/vscode" },
           { text: "Git", link: "/git" },
           { text: "Zsh", link: "/zsh" },
         ],

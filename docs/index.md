@@ -46,6 +46,12 @@ features:
     icon:
       src: /img/capacitor.svg
 
+  - title: VSCode
+    details: Logiciel d'édition de code.
+    link: /vscode
+    icon:
+      src: /img/vscode.svg
+
   - title: Git
     details: Gestionnaire de versions distribué.
     link: /git
