@@ -2,17 +2,27 @@
 
 ## Déclaration de variables
 
-Les variables pointent vers une valeur. Pour assigner une valeur à une variable on utilise le mot clé **let** et la syntaxe _camel case_ pour le nom de la variable :
+Les variables pointent vers une valeur. Pour assigner une valeur à une variable on utilise le mot clé **let** ou **const** et la syntaxe _camel case_ pour le nom de la variable :
+
+Avec **let**, la variable peut être réassignée :
 
 ```js
-let variable = "Bonjour"
-let otherVariable = 3
+let cityName = "Paris"
+cityName = "Lyon"
 ```
 
-Les constantes peuvent être écrites en majuscules :
+Avec **const**, la variable ne peut pas être réassignée :
+
+```js
+const year = 1990
+year = 1991 // ERROR !
+```
+
+Par convention, les constantes pour les valeurs fixes connues à l'avance s'écrivent en majuscules :
 
 ```js
 const PI = 3.14159
+const MAX_SIZE = 100
 ```
 
 ## Types de variables
