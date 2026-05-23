@@ -15,7 +15,7 @@ Avec **const**, la variable ne peut pas être réassignée :
 
 ```js
 const year = 1990
-year = 1991 // ERROR !
+year = 2000 // ERROR !
 ```
 
 Par convention, les constantes pour les valeurs fixes connues à l'avance s'écrivent en majuscules :
@@ -36,11 +36,12 @@ let age = 22
 const PI = 3.14159
 ```
 
-- **String** — chaîne de caractères (texte) :
+- **String** — chaîne de caractères :
 
 ```js
-let name = "John"
-let person = "James"
+let firstname = "John"
+let lastname = "O'Conor"
+let fullname = `${firstname} ${lastname}`
 ```
 
 - **Boolean** — valeur vraie ou fausse :
