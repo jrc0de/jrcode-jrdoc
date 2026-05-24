@@ -2,7 +2,9 @@
 
 ## Déclaration de variables
 
-Les variables pointent vers une valeur. Pour assigner une valeur à une variable on utilise le mot clé **let** ou **const** et la syntaxe _camel case_ pour le nom de la variable.
+## Déclaration de variables
+
+Les variables pointent vers une valeur. Pour assigner une valeur à une variable on utilise le mot clé **let** ou **const** et la syntaxe _camel case_ pour le nom de la variable. Leur portée est limitée au bloc de code dans lequel elles sont déclarées.
 
 Avec **let**, la variable peut être réassignée :
 
@@ -115,3 +117,17 @@ multiligne */
 - `!=` pour vérifier l'inégalité
 - `<`, `>` pour inférieur / supérieur
 - `<=`, `>=` pour inférieur ou égal / supérieur ou égal
+
+## Structures de contrôle
+
+### Blocs conditionnels
+
+```js
+if (/* condition (Boolean) */) {
+    // code à exécuter si condition vraie
+} else if (/* autre condition (Boolean) */) {
+    // code à exécuter si autre condition vraie
+} else {
+    // code à exécuter dans tous les autres cas
+}
+```
