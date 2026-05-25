@@ -143,14 +143,20 @@ if (/* Boolean */) console.log(text)
 ### Bloc conditionnel switch
 
 ```js
-switch (/* valeur */) {
+switch (/* valeur à tester */) {
     case /* valeur 1 */:
-        // code à exécuter si valeur 1
+        // code à exécuter si valeur === valeur 1
         break
     case /* valeur 2 */:
-        // code à exécuter si valeur 2
+        // code à exécuter si valeur === valeur 2
         break
     default:
         // code à exécuter dans tous les autres cas
 }
+```
+
+### Opérateur ternaire
+
+```js
+/* condition (Boolean) */ ? /* valeur si vrai */ : /* valeur si faux */
 ```
