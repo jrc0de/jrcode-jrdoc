@@ -21,22 +21,20 @@ export default defineConfig({
       linkText: "Retour à l'accueil",
       code: "404",
     },
-    sidebar: [
-      {
-        text: "Technologies",
-        items: [
-          { text: "JavaScript", link: "/javascript" },
-          { text: "HTML", link: "/html" },
-          { text: "CSS", link: "/css" },
-          { text: "Bun", link: "/bun" },
-          { text: "Ionic", link: "/ionic" },
-          { text: "Capacitor", link: "/capacitor" },
-          { text: "VSCode", link: "/vscode" },
-          { text: "Git", link: "/git" },
-          { text: "Zsh", link: "/zsh" },
-        ],
-      },
-    ],
+
+    sidebar: {
+      "/javascript/": [
+        {
+          text: "JavaScript",
+          items: [
+            { text: "Variables", link: "/javascript/variables" },
+            { text: "Opérateurs", link: "/javascript/operateurs" },
+            { text: "Structures de contrôle", link: "/javascript/structures" },
+            { text: "Fonctions", link: "/javascript/fonctions" },
+          ],
+        },
+      ],
+    },
 
     socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
   },

@@ -76,7 +76,17 @@ const id = Symbol("id")
 const big = 9007199254740991n
 ```
 
-### Variables de type objet
+### Variables de type non-primitif
+
+- **Array** — liste ordonnée de valeurs, accessibles par index (commence à 0) :
+
+```js
+const items = [item1, item2, item3...]
+
+items[0] //item1
+```
+
+- **Objects** — collection de paires clé/valeur :
 
 ## Commentaires
 

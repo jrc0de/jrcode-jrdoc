@@ -12,7 +12,7 @@ hero:
 features:
   - title: JavaScript
     details: Langage de programmation dynamique pour le web côté client et serveur.
-    link: /javascript
+    link: /javascript/variables
     icon:
       src: /img/javascript.svg
 
