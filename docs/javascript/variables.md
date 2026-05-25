@@ -27,6 +27,8 @@ const MAX_SIZE = 100
 
 ## Variables de type primitif
 
+Les types primitifs sont **immuables** : on ne peut pas modifier la valeur elle-même, seulement réassigner la variable vers une nouvelle valeur.
+
 ### Number
 
 Nombre entier ou décimal.
@@ -89,10 +91,11 @@ const big = 9007199254740991n
 
 ## Variables de type non-primitif
 
+Les types non-primitifs sont **mutables** : on peut modifier leur contenu sans réassigner la variable.
+
 ### Object
 
-Collection de paires clé/valeur. Les tableaux, fonctions, et dates sont aussi
-des objets en JavaScript.
+Collection de paires clé/valeur. Les tableaux, fonctions, et dates sont aussi des objets en JavaScript.
 
 ```js
 const user = { name: "John", age: 30 }
@@ -103,9 +106,12 @@ user["age"] // 30
 ### Array
 
 Les tableaux sont des listes ordonnées de valeurs accessibles par index (commence à 0).
-En JavaScript, un tableau est un **objet spécial**.
+En JavaScript, un tableau est un **objet** spécial.
 
 ```js
 const items = ["a", "b", "c"]
+
 items[0] // "a"
+items[2] = "d" // ["a", "b", "d"]
+items.length // 3
 ```
