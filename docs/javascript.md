@@ -114,20 +114,30 @@ multiligne */
 
 - `==` pour vérifier l'égalité de valeur
 - `===` pour vérifier l'égalité de valeur **et** de type (recommandé)
-- `!=` pour vérifier l'inégalité
+- `!=` pour vérifier l'inégalité de valeur
+- `!==` pour vérifier l'inégalité de valeur **et** de type (recommandé)
 - `<`, `>` pour inférieur / supérieur
 - `<=`, `>=` pour inférieur ou égal / supérieur ou égal
+
+### Opérateurs logiques
+
+- `!` pour inverser un Boolean
+- `&&` pour vérifier que deux conditions sont vraies (ET)
+- `||` pour vérifier qu'au moins une condition est vraie (OU)
 
 ## Structures de contrôle
 
 ### Blocs conditionnels
 
 ```js
-if (/* condition (Boolean) */) {
-    // code à exécuter si condition vraie
-} else if (/* autre condition (Boolean) */) {
-    // code à exécuter si autre condition vraie
+if (/* condition 1 (Boolean) */) {
+    // code à exécuter si condition 1 vraie
+} else if (/* condition 2 (Boolean) */) {
+    // code à exécuter si condition 2 vraie
 } else {
     // code à exécuter dans tous les autres cas
 }
+
+// Si le code à exécuter tient sur une ligne on peut omettre les accolades
+if (/* Boolean */) console.log(text)
 ```
