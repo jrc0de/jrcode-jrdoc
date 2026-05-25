@@ -160,3 +160,25 @@ switch (/* valeur à tester */) {
 ```js
 /* condition (Boolean) */ ? /* valeur si vrai */ : /* valeur si faux */
 ```
+## Fonctions
+
+### Syntaxe de base des fonctions
+
+On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels) séparés par des virgules. Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`.
+
+```js
+function myNewFunction(/* paramètres */) {
+    // code logique de la fonction
+}
+
+// Exemple avec paramètres :
+function add(a, b) {
+    return a + b
+}
+
+// Pour invoquer la fonction :
+myNewFunction()
+
+// Pour attribuer le retour de la fonction à une variable :
+let myResult = add(20, 10)
+```
