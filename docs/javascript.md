@@ -160,25 +160,29 @@ switch (/* valeur à tester */) {
 ```js
 /* condition (Boolean) */ ? /* valeur si vrai */ : /* valeur si faux */
 ```
-## Fonctions
 
-### Syntaxe de base des fonctions
+### Fonctions déclaratives
 
-On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels) séparés par des virgules. Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`.
+On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels) séparés par des virgules. Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`. Les fonctions déclaratives sont _hissées (hoisting)_ — elles peuvent être invoquées avant leur déclaration dans le code.
 
 ```js
-function myNewFunction(/* paramètres */) {
-    // code logique de la fonction
-}
-
-// Exemple avec paramètres :
 function add(a, b) {
-    return a + b
+  return a + b
 }
-
-// Pour invoquer la fonction :
-myNewFunction()
 
 // Pour attribuer le retour de la fonction à une variable :
-let myResult = add(20, 10)
+const myResult = add(20, 10)
+```
+
+### Fonctions anonymes
+
+Une fonction anonyme est une fonction sans nom assignée à une variable — c'est une _expression de fonction_. Contrairement aux fonctions déclaratives, elles ne sont pas _hissées (hoisting)_ et ne peuvent pas être invoquées avant leur déclaration.
+
+```js
+const add = function (a, b) {
+  return a + b
+}
+
+// Pour attribuer le retour de la fonction à une variable :
+const myResult = add(20, 10)
 ```
