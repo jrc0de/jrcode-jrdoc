@@ -31,6 +31,7 @@ export default defineConfig({
             { text: "Opérateurs", link: "/javascript/operateurs" },
             { text: "Structures de contrôle", link: "/javascript/structures" },
             { text: "Fonctions", link: "/javascript/fonctions" },
+            { text: "Commentaires", link: "/javascript/commentaires" },
           ],
         },
       ],

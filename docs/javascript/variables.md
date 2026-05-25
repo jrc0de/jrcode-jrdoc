@@ -1,4 +1,4 @@
-# JavaScript
+# Les variables
 
 ## Déclaration de variables
 
@@ -25,18 +25,20 @@ const PI = 3.14159
 const MAX_SIZE = 100
 ```
 
-## Types de variables
+## Variables de type primitif
 
-### Variables de type primitif
+### Number
 
-- **Number** — nombre entier ou décimal :
+Nombre entier ou décimal.
 
 ```js
 let age = 22
 const PI = 3.14159
 ```
 
-- **String** — chaîne de caractères :
+### String
+
+Pour les chaînes de caractères.
 
 ```js
 let firstname = "John"
@@ -44,171 +46,66 @@ let lastname = "O'Conor"
 let fullname = `${firstname} ${lastname}`
 ```
 
-- **Boolean** — valeur vraie ou fausse :
+### Boolean
+
+Ils ne peuvent prendre que deux valeurs : `true` ou `false`
 
 ```js
-let check = true
 let test = false
 ```
 
-- **Undefined** — variable déclarée mais sans valeur assignée :
+### Undefined
+
+Variable déclarée mais sans valeur assignée :
 
 ```js
 let x // undefined
 let y = undefined
 ```
 
-- **Null** — absence intentionnelle de valeur :
+### Null
+
+Absence intentionnelle de valeur :
 
 ```js
 let z = null
 ```
 
-- **Symbol** — valeur unique et immuable :
+### Symbol
+
+Valeur unique et immuable :
 
 ```js
 const id = Symbol("id")
 ```
 
-- **BigInt** — entier de très grande taille dépassant la limite de Number :
+### BigInt
+
+Entier de très grande taille dépassant la limite de Number.
 
 ```js
 const big = 9007199254740991n
 ```
 
-### Variables de type non-primitif
+## Variables de type non-primitif
 
-- **Array** — liste ordonnée de valeurs, accessibles par index (commence à 0) :
+### Object
+
+Collection de paires clé/valeur. Les tableaux, fonctions, et dates sont aussi
+des objets en JavaScript.
 
 ```js
-const items = [item1, item2, item3...]
-
-items[0] //item1
+const user = { name: "John", age: 30 }
+user.name // "John"
+user["age"] // 30
 ```
 
-- **Objects** — collection de paires clé/valeur :
+### Array
 
-## Commentaires
-
-Il est possible d'utiliser des commentaires au sein d'un fichier de code JavaScript :
-
-```js
-// Ceci est un commentaire sur une seule ligne
-
-/* Ceci est
-un commentaire
-multiligne */
-```
-
-## Les opérateurs
-
-### Opérateurs mathématiques
-
-- `+` pour additionner des nombres ou concaténer des chaînes de caractères
-- `-` pour soustraire une valeur
-- `/` pour diviser une valeur
-- `*` pour multiplier une valeur
-- `**` pour élever un nombre à une puissance
-- `%` pour obtenir le reste d'une division (modulo)
-
-### Opérateurs d'assignement
-
-- `=` pour assigner une valeur à une variable
-- `+=`, `-=`, `*=`, `/=` pour modifier et réassigner une variable
-- `++` pour incrémenter de 1 (raccourci de `+= 1`)
-- `--` pour décrémenter de 1 (raccourci de `-= 1`)
-
-### Opérateurs de comparaison
-
-- `==` pour vérifier l'égalité de valeur
-- `===` pour vérifier l'égalité de valeur **et** de type (recommandé)
-- `!=` pour vérifier l'inégalité de valeur
-- `!==` pour vérifier l'inégalité de valeur **et** de type (recommandé)
-- `<`, `>` pour inférieur / supérieur
-- `<=`, `>=` pour inférieur ou égal / supérieur ou égal
-
-### Opérateurs logiques
-
-- `!` pour inverser un Boolean
-- `&&` pour vérifier que deux conditions sont vraies (ET)
-- `||` pour vérifier qu'au moins une condition est vraie (OU)
-
-## Structures de contrôle
-
-### Bloc conditionnel if...else
+Les tableaux sont des listes ordonnées de valeurs accessibles par index (commence à 0).
+En JavaScript, un tableau est un **objet spécial**.
 
 ```js
-if (/* condition 1 (Boolean) */) {
-    // code à exécuter si condition 1 vraie
-} else if (/* condition 2 (Boolean) */) {
-    // code à exécuter si condition 2 vraie
-} else {
-    // code à exécuter dans tous les autres cas
-}
-
-// Si le code à exécuter tient sur une ligne on peut omettre les accolades
-if (/* Boolean */) console.log(text)
-```
-
-### Bloc conditionnel switch
-
-```js
-switch (/* valeur à tester */) {
-    case /* valeur 1 */:
-        // code à exécuter si valeur === valeur 1
-        break
-    case /* valeur 2 */:
-        // code à exécuter si valeur === valeur 2
-        break
-    default:
-        // code à exécuter dans tous les autres cas
-}
-```
-
-### Opérateur ternaire
-
-```js
-/* condition (Boolean) */ ? /* valeur si vrai */ : /* valeur si faux */
-```
-
-## Fonctions
-
-### Fonctions déclaratives
-
-On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels) séparés par des virgules. Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`. Les fonctions déclaratives sont _hissées (hoisting)_ ; elles peuvent être invoquées avant leur déclaration dans le code.
-
-```js
-function add(a, b) {
-  return a + b
-}
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
-```
-
-### Expressions de fonction
-
-Une _expression de fonction_ ou _fonction anonyme_ est une fonction sans nom assignée à une variable. Contrairement aux fonctions déclaratives, elles ne sont pas _hissées_ et ne peuvent pas être invoquées avant leur déclaration.
-
-```js
-const add = function (a, b) {
-  return a + b
-}
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
-```
-
-### Fonctions fléchées
-
-Une fonction fléchée est une syntaxe raccourcie pour écrire une expression de fonction, à l'aide de `=>`. Comme les fonctions anonymes, elles ne sont pas _hissées_. Elles ne possèdent pas leur propre contexte `this`, ce qui les distingue des fonctions classiques. Si le corps ne contient qu'une seule expression, on peut omettre les accolades et le mot clé **return** (retour implicite) :
-
-```js
-const add = (a, b) => a + b
-
-// Avec un seul paramètre, les parenthèses sont également optionnelles :
-const double = (x) => x * 2
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
+const items = ["a", "b", "c"]
+items[0] // "a"
 ```
