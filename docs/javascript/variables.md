@@ -109,9 +109,22 @@ Les tableaux sont des listes ordonnées de valeurs accessibles par index (commen
 En JavaScript, un tableau est un **objet** spécial.
 
 ```js
-const items = ["a", "b", "c"]
+const alphabet = ["a", "b", "c"]
 
-items[0] // "a"
-items[2] = "d" // ["a", "b", "d"]
-items.length // 3
+alphabet[0] // "a"
+alphabet[2] = "d" // ["a", "b", "d"]
+alphabet.length // 3
+```
+
+Quelques méthodes utiles sur les tableaux :
+
+```js
+const alphabet = ["a", "b", "c"]
+
+alphabet.push("d") // ['a', 'b', 'c', 'd']
+alphabet.pop() // ['a', 'b', 'c']
+alphabet.unshift("z") // ['z', 'a', 'b', 'c']
+alphabet.shift() // ['a', 'b', 'c']
+alphabet.indexOf("c") // 2
+alphabet.includes("z") // false
 ```
