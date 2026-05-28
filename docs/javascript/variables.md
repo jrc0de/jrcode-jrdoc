@@ -98,9 +98,21 @@ Les types non-primitifs sont **mutables** : on peut modifier leur contenu sans r
 Collection de paires clé/valeur. Les tableaux, fonctions, et dates sont aussi des objets en JavaScript.
 
 ```js
-const user = { name: "John", age: 30 }
-user.name // "John"
-user["age"] // 30
+const user = {
+  // key : value,
+  name: "John",
+  age: 30,
+}
+```
+
+Pour obtenir ou modifier les **propriétés** d'un objet on utilise l'une des notations suivantes. La notation avec les crochets permet d'utiliser une _expression_ à la place du nom de la propriété.
+
+```js
+user.name // pour accéder à la propriété 'name'
+user.name = "James" // pour modifier la propriété 'name'
+
+user["name"] // pour accéder à la propriété 'name'
+user["name"] = "James" // pour modifier la propriété 'name'
 ```
 
 ### Array

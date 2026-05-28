@@ -8,9 +8,6 @@ On déclare une fonction à l'aide du mot clé **function**. Une fonction peut p
 function add(a, b) {
   return a + b
 }
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
 ```
 
 ## Expressions de fonction
@@ -21,9 +18,6 @@ Une _expression de fonction_ ou _fonction anonyme_ est une fonction sans nom ass
 const add = function (a, b) {
   return a + b
 }
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
 ```
 
 ## Fonctions fléchées
@@ -35,7 +29,4 @@ const add = (a, b) => a + b
 
 // Avec un seul paramètre, les parenthèses sont également optionnelles :
 const double = (x) => x * 2
-
-// Pour attribuer le retour de la fonction à une variable :
-const myResult = add(2, 4)
 ```
