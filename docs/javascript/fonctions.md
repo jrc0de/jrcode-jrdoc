@@ -30,3 +30,39 @@ const add = (a, b) => a + b
 // Avec un seul paramètre, les parenthèses sont également optionnelles :
 const double = (x) => x * 2
 ```
+
+## Méthodes
+
+Quand une fonction est assignée comme propriété d'un objet, on l'appelle une **méthode**. On peut utiliser une expression de fonction ou la syntaxe raccourcie ES6 (sans le mot clé `function`) :
+
+```js
+const calculator = {
+  add: function (a, b) {
+    return a + b
+  },
+  // Syntaxe raccourcie (ES6)
+  subtract(a, b) {
+    return a - b
+  },
+}
+
+calculator.add(2, 3) // 5
+calculator.subtract(5, 2) // 3
+```
+
+Les fonctions fléchées ne sont pas adaptées comme méthodes car elles n'ont pas leur propre `this`.
+
+## Le mot clé `this`
+
+`this` désigne l'objet depuis lequel la fonction est appelée (le **contexte d'appel**).
+
+Dans une méthode, `this` référence l'objet qui contient la méthode :
+
+```js
+const user = {
+  name: "John",
+  greet() {
+    return `Bonjour, je m'appelle ${this.name}`
+  },
+}
+```
