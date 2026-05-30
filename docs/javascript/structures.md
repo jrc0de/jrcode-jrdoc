@@ -45,13 +45,31 @@ for (let i = 0; i < 10; i++) {
   // code à répéter
 }
 ```
- 
+
 `continue` interrompt l'itération en cours et passe directement à la suivante. `break` sort complètement de la boucle :
- 
+
 ```js
 for (let i = 0; i < 10; i++) {
   if (i === 3) continue // saute le i === 3, passe à i === 4
-  if (i === 7) break    // arrête la boucle, i === 8, 9 ne sont jamais atteints
+  if (i === 7) break // arrête la boucle, i === 8, 9 ne sont jamais atteints
   console.log(i) // 0, 1, 2, 4, 5, 6
 }
+```
+
+## Boucle while
+
+La boucle `while` répète un bloc de code **tant qu'une condition est vraie**. Contrairement à la boucle `for`, elle est utilisée quand le nombre d'itérations n'est pas connu à l'avance :
+
+```js
+while (/* condition (Boolean) */) {
+  // code à répéter
+}
+```
+
+Les instructions `continue` et `break` fonctionnent de la même façon que dans une boucle `for`. La variante `do...while` garantit quant à elle une **première exécution systématique** du bloc, avant de vérifier la condition :
+
+```js
+do {
+  // code à répéter
+} while (/* condition (Boolean) */)
 ```
