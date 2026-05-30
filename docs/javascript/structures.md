@@ -45,3 +45,13 @@ for (let i = 0; i < 10; i++) {
   // code à répéter
 }
 ```
+ 
+`continue` interrompt l'itération en cours et passe directement à la suivante. `break` sort complètement de la boucle :
+ 
+```js
+for (let i = 0; i < 10; i++) {
+  if (i === 3) continue // saute le i === 3, passe à i === 4
+  if (i === 7) break    // arrête la boucle, i === 8, 9 ne sont jamais atteints
+  console.log(i) // 0, 1, 2, 4, 5, 6
+}
+```
