@@ -35,3 +35,13 @@ switch (/* valeur à tester */) {
 ```js
 /* condition (Boolean) */ ? /* valeur si vrai */ : /* valeur si faux */
 ```
+
+## Boucle for
+
+La boucle `for` répète un bloc de code un nombre défini de fois. Elle se compose de trois parties : l'**initialisation** (exécutée une seule fois au départ), la **condition** (vérifiée avant chaque itération), et l'**incrément** (exécuté après chaque itération) :
+
+```js
+for (let i = 0; i < 10; i++) {
+  // code à répéter
+}
+```
