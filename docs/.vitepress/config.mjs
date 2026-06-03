@@ -35,6 +35,15 @@ export default defineConfig({
           ],
         },
       ],
+      "/html/": [
+        {
+          text: "HTML",
+          items: [
+            { text: "Structure", link: "/html/structure" },
+            { text: "Commentaires", link: "/html/commentaires" },
+          ],
+        },
+      ],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
