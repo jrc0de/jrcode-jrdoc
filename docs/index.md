@@ -63,4 +63,10 @@ features:
     link: /zsh
     icon:
       src: /img/zsh.svg
+
+  - title: Markdown
+    details: Langage de balisage léger pour rédiger du contenu textuel.
+    link: /markdown
+    icon:
+      src: /img/md.svg
 ---
