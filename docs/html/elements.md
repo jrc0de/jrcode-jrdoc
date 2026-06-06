@@ -25,3 +25,19 @@ Le texte peut être mis en **gras** avec la balise `strong` et en _italique_ ave
 ```html
 <strong>Texte en gras</strong> <em>Texte en italique</em>
 ```
+
+## Listes
+
+Les listes non ordonnées utilisent la balise `ul` avec des éléments `li`, et les listes ordonnées la balise `ol`.
+
+```html
+<ul>
+  <li>Élément de liste</li>
+  <li>Autre élément</li>
+</ul>
+
+<ol>
+  <li>Premier élément</li>
+  <li>Deuxième élément</li>
+</ol>
+```
