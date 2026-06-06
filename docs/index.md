@@ -18,7 +18,7 @@ features:
 
   - title: HTML
     details: Langage de balisage structurant le contenu des pages web.
-    link: /html/structure
+    link: /html/fondamentaux
     icon:
       src: /img/html.svg
 

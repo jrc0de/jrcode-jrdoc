@@ -39,7 +39,7 @@ export default defineConfig({
         {
           text: "HTML",
           items: [
-            { text: "Structure", link: "/html/structure" },
+            { text: "Fondamentaux", link: "/html/fondamentaux" },
             { text: "Eléments", link: "/html/elements" },
             { text: "Commentaires", link: "/html/commentaires" },
           ],

@@ -41,3 +41,15 @@ Les listes non ordonnées utilisent la balise `ul` avec des éléments `li`, et 
   <li>Deuxième élément</li>
 </ol>
 ```
+
+## Images
+
+Les images sont insérées avec la balise `img`, qui est auto-fermante. Elle utilise plusieurs attributs essentiels.
+
+```html
+<img src="img/image.jpg" alt="Description de l'image" width="300" height="200" />
+```
+
+- `src` : chemin ou URL de l'image
+- `alt` : texte alternatif (accessibilité et SEO)
+- `width` / `height` : dimensions en pixels
