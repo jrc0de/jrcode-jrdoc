@@ -53,3 +53,71 @@ Les images sont insérées avec la balise `img`, qui est auto-fermante. Elle uti
 - `src` : chemin ou URL de l'image
 - `alt` : texte alternatif (accessibilité et SEO)
 - `width` / `height` : dimensions en pixels
+
+## Liens
+
+### L'élément `<a>`
+
+Un lien hypertexte est créé avec la balise `<a>`. L'attribut `href` définit la destination du lien.
+
+```html
+<a href="https://monsite.com">Visiter mon site.</a>
+```
+
+### Types de liens
+
+#### Liens absolus
+
+Pointent vers une URL complète (protocole inclus). Utilisés pour les ressources externes.
+
+```html
+<a href="https://www.mozilla.org">Mozilla</a>
+```
+
+#### Liens relatifs
+
+Pointent vers une ressource du même site, en partant de la page courante.
+
+```html
+<!-- Même dossier -->
+<a href="contact.html">Contact</a>
+<!-- Sous-dossier -->
+<a href="blog/article.html">Un article</a>
+<!-- Dossier parent -->
+<a href="../index.html">Retour à l'accueil</a>
+```
+
+#### Liens d'ancre
+
+Permettent de naviguer vers une section précise de la page via l'attribut `id`.
+
+```html
+<h2 id="section-contact">Contact</h2>
+
+<a href="#section-contact">Aller au contact</a>
+```
+
+#### Liens mailto et tel
+
+Pour ouvrir le client mail ou composer un appel téléphonique.
+
+```html
+<a href="mailto:contact@example.com">Nous écrire</a> <a href="tel:+33600000000">Nous appeler</a>
+```
+
+### Attributs courants
+
+| Attribut   | Rôle                                                  |
+| ---------- | ----------------------------------------------------- |
+| `href`     | URL de destination (obligatoire)                      |
+| `target`   | Contexte d'ouverture (`_blank` pour un nouvel onglet) |
+| `title`    | Info-bulle au survol                                  |
+| `download` | Force le téléchargement du fichier cible              |
+
+```html
+<!-- Ouvrir dans un nouvel onglet (+ sécurité) -->
+<a href="https://example.com" target="_blank"> Ouvrir dans un nouvel onglet </a>
+
+<!-- Télécharger un fichier -->
+<a href="/files/rapport.pdf" download>Télécharger le rapport</a>
+```
