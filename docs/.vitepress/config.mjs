@@ -6,7 +6,34 @@ export default defineConfig({
   title: "JRDoc",
   description: "Web dev doc",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      {
+        text: "Langages",
+        items: [
+          { text: "JavaScript", link: "/javascript/variables" },
+          { text: "HTML", link: "/html/fondamentaux" },
+          { text: "CSS", link: "/css" },
+          { text: "Markdown", link: "/markdown" },
+        ],
+      },
+      {
+        text: "Outils",
+        items: [
+          { text: "Bun", link: "/bun" },
+          { text: "VSCode", link: "/vscode" },
+          { text: "Git", link: "/git" },
+          { text: "Zsh", link: "/zsh" },
+        ],
+      },
+      {
+        text: "Mobile",
+        items: [
+          { text: "Ionic", link: "/ionic" },
+          { text: "Capacitor", link: "/capacitor" },
+        ],
+      },
+    ],
+
     docFooter: {
       prev: "Page précédente",
       next: "Page suivante",

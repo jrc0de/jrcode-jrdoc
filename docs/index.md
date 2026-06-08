@@ -6,7 +6,7 @@ hero:
   name: "JRDoc"
   text: "Documentation pour le développement web"
   image:
-    src: /img/logo.png
+    src: /img/rocket.png
     alt: JRDoc logo
 
 features:
