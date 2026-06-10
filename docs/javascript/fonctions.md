@@ -2,7 +2,11 @@
 
 ## Fonctions déclaratives
 
-On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels) séparés par des virgules. Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`. Les fonctions déclaratives sont _hissées (hoisting)_ ; elles peuvent être invoquées avant leur déclaration dans le code.
+On déclare une fonction à l'aide du mot clé **function**. Une fonction peut posséder un ou plusieurs **paramètres** (optionnels), séparés par des virgules.
+
+Les **paramètres** sont les variables définies dans la fonction. Les **arguments** sont les valeurs effectivement passées lors de l'appel de la fonction.
+
+Le mot clé **return** (optionnel) permet de retourner une valeur ; sans lui la fonction renvoie `undefined`. Les fonctions déclaratives sont _hissées (hoisting)_ ; elles peuvent être invoquées avant leur déclaration dans le code.
 
 ```js
 function add(a, b) {
