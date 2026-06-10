@@ -42,6 +42,7 @@ export default defineConfig({
     outline: {
       label: "Sur cette page",
     },
+    darkModeSwitchLabel: "Apparence",
     notFound: {
       title: "PAGE INTROUVABLE",
       quote: "On dirait que vous avez emprunté un lien rompu ou une page qui n'existe plus.",

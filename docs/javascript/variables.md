@@ -25,11 +25,11 @@ const PI = 3.14159
 const MAX_SIZE = 100
 ```
 
-## Variables de type primitif
+## Les types primitifs
 
-Les types primitifs sont **immuables** : on ne peut pas modifier la valeur elle-même, seulement réassigner la variable vers une nouvelle valeur.
+Les variables de type primitif ne sont pas **mutables** : on ne peut pas modifier la valeur elle-même, seulement réassigner la variable vers une nouvelle valeur.
 
-### Number
+### Type _number_
 
 Nombre entier ou décimal.
 
@@ -38,7 +38,7 @@ let age = 22
 const PI = 3.14159
 ```
 
-### String
+### Type _string_
 
 Pour les chaînes de caractères.
 
@@ -48,7 +48,7 @@ let lastname = "O'Conor"
 let fullname = `${firstname} ${lastname}`
 ```
 
-### Boolean
+### Type _boolean_
 
 Ils ne peuvent prendre que deux valeurs : `true` ou `false`
 
@@ -56,7 +56,7 @@ Ils ne peuvent prendre que deux valeurs : `true` ou `false`
 let test = false
 ```
 
-### Undefined
+### Type _undefined_
 
 Variable déclarée mais sans valeur assignée :
 
@@ -65,7 +65,7 @@ let x // undefined
 let y = undefined
 ```
 
-### Null
+### Type _null_
 
 Absence intentionnelle de valeur :
 
@@ -73,7 +73,7 @@ Absence intentionnelle de valeur :
 let z = null
 ```
 
-### Symbol
+### Type _symbol_
 
 Valeur unique et immuable :
 
@@ -81,7 +81,7 @@ Valeur unique et immuable :
 const id = Symbol("id")
 ```
 
-### BigInt
+### Type _bigint_
 
 Entier de très grande taille dépassant la limite de Number.
 
@@ -89,13 +89,11 @@ Entier de très grande taille dépassant la limite de Number.
 const big = 9007199254740991n
 ```
 
-## Variables de type non-primitif
+## Le type _object_
 
-Les types non-primitifs sont **mutables** : on peut modifier leur contenu sans réassigner la variable.
+Les variables de type _object_ sont **mutables** : on peut modifier leur contenu sans réassigner la variable. En JavaScript les objets (collections de paires clé/valeur), les tableaux, les fonctions et les dates sont tous des variables de type objet.
 
-### Object
-
-Collection de paires clé/valeur. Les tableaux, fonctions, et dates sont aussi des objets en JavaScript.
+### Les objets
 
 ```js
 const user = {
@@ -115,7 +113,7 @@ user["name"] // pour accéder à la propriété 'name'
 user["name"] = "James" // pour modifier la propriété 'name'
 ```
 
-### Array
+### Les tableaux
 
 Les tableaux sont des listes ordonnées de valeurs accessibles par index (commence à 0).
 En JavaScript, un tableau est un **objet** spécial.
