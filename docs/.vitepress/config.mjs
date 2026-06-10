@@ -7,6 +7,7 @@ export default defineConfig({
   description: "Web dev doc",
   themeConfig: {
     nav: [
+      { text: "JRCode", link: "https://jrcode.cloud/" },
       {
         text: "Langages",
         items: [
@@ -73,7 +74,5 @@ export default defineConfig({
         },
       ],
     },
-
-    socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
   },
 })

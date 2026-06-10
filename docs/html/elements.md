@@ -121,3 +121,15 @@ Pour ouvrir le client mail ou composer un appel téléphonique.
 <!-- Télécharger un fichier -->
 <a href="/files/rapport.pdf" download>Télécharger le rapport</a>
 ```
+
+## Structuration sémantique
+
+HTML5 introduit des éléments qui donnent du sens à l'organisation de la page, au-delà du simple découpage visuel.
+
+Le `header` représente l'en-tête d'une page ou d'une section. Il contient généralement le logo, le titre du site et la navigation principale. Il peut apparaître plusieurs fois dans une page (en-tête du site, en-tête d'un `article`…).
+
+Le `nav` regroupe les liens de navigation principaux du site ou de la page. Il est réservé aux blocs de navigation structurants — pas besoin d'y mettre chaque groupe de liens de la page.
+
+Le `article` représente un contenu autonome et redistribuable : billet de blog, actualité, commentaire, fiche produit… Il doit avoir du sens sorti de son contexte, pour pouvoir être partagé ou syndiqué tel quel.
+
+Le `footer` représente le pied de page d'une page ou d'une section. Il contient généralement les mentions légales, les liens secondaires ou les informations de contact. Comme `header`, il peut apparaître plusieurs fois dans une page.
