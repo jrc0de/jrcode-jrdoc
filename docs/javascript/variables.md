@@ -138,3 +138,49 @@ alphabet.shift() // ['a', 'b', 'c']
 alphabet.indexOf("c") // 2
 alphabet.includes("z") // false
 ```
+
+## Shallow vs Deep copy
+
+Quand on copie un objet ou un tableau, il faut distinguer deux comportements selon la méthode utilisée.
+
+### Assignation simple
+
+Assigner un objet à une nouvelle variable ne crée pas de copie : les deux variables pointent vers le **même objet** en mémoire.
+
+```js
+const user = { name: "Jean", age: 30 }
+const userCopy = user
+
+userCopy.name = "Marc"
+console.log(user.name) // "Marc" — l'original est modifié !
+```
+
+### Shallow copy (copie superficielle)
+
+Une shallow copy crée un **nouvel objet** avec les mêmes propriétés de premier niveau. Mais si l'objet contient des valeurs de type objet (objets imbriqués, tableaux...), celles-ci restent **partagées** entre l'original et la copie.
+
+```js
+const user = { name: "Jean", address: { city: "Paris" } }
+
+const userCopy = { ...user }
+
+userCopy.name = "Marc"
+console.log(user.name) // "Jean" — propriété primitive, non partagée
+
+userCopy.address.city = "Lyon"
+console.log(user.address.city) // "Lyon" — objet imbriqué, toujours partagé !
+```
+
+### Deep copy (copie profonde)
+
+Une deep copy crée un **nouvel objet indépendant** à tous les niveaux, y compris les objets imbriqués. Aucune référence n'est partagée avec l'original.
+
+```js
+const user = { name: "Jean", address: { city: "Paris" } }
+
+// Avec structuredClone (méthode native moderne)
+const userCopy = structuredClone(user)
+
+userCopy.address.city = "Lyon"
+console.log(user.address.city) // "Paris" — l'original est intact
+```
