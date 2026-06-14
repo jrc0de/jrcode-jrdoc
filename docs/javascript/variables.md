@@ -148,10 +148,10 @@ Le destructuring permet d'**extraire des valeurs** d'un tableau ou d'un objet et
 On extrait les valeurs **par position** :
 
 ```js
-const alphabet = ["alpha", "beta", "charlie"]
+const alphabet = ["alpha", "bravo", "charlie"]
 
 const [a, b, c] = alphabet
-// a = "alpha", b = "beta", c = "charlie"
+// a = "alpha", b = "bravo", c = "charlie"
 ```
 
 On peut **sauter** des éléments avec une virgule :
