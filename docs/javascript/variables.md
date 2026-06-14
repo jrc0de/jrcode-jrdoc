@@ -139,6 +139,57 @@ alphabet.indexOf("c") // 2
 alphabet.includes("z") // false
 ```
 
+## Destructuring
+
+Le destructuring permet d'**extraire des valeurs** d'un tableau ou d'un objet et de les assigner directement à des variables.
+
+### Destructuring de tableau
+
+On extrait les valeurs **par position** :
+
+```js
+const alphabet = ["alpha", "beta", "charlie"]
+
+const [a, b, c] = alphabet
+// a = "alpha", b = "beta", c = "charlie"
+```
+
+On peut **sauter** des éléments avec une virgule :
+
+```js
+const [a, , c] = alphabet
+// a = "alpha", c = "charlie"
+```
+
+Pour un tableau **imbriqué**, on imbrique les crochets :
+
+```js
+const points = [1, [2, 3]]
+
+const [x, [y, z]] = points
+// x = 1, y = 2, z = 3
+```
+
+Avec une **valeur par défaut** si l'élément est `undefined` :
+
+```js
+const hand = ["as", "roi"]
+
+const [first = "joker", second = "joker", third = "joker"] = hand
+// first = "as", second = "roi", third = "joker" (pas de 3ème carte)
+```
+
+### Destructuring d'objet
+
+On extrait les valeurs **par nom de propriété** :
+
+```js
+const user = { name: "Jean", age: 30 }
+
+const { name, age } = user
+// name = "Jean", age = 30
+```
+
 ## Shallow vs Deep copy
 
 Quand on copie un objet ou un tableau, il faut distinguer deux comportements selon la méthode utilisée.
