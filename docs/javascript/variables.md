@@ -190,7 +190,44 @@ const { name, age } = user
 // name = "Jean", age = 30
 ```
 
-## Shallow vs Deep copy
+On peut **renommer** la variable à la volée :
+
+```js
+const { name: firstName, age: years } = user
+// firstName = "Jean", years = 30
+```
+
+Et combiner renommage et **valeur par défaut** :
+
+```js
+const { name: firstName, city: hometown = "Paris" } = user
+// firstName = "Jean", hometown = "Paris" (propriété absente)
+```
+
+Sans déclaration, les accolades sont interprétées comme un bloc de code. Les parenthèses sont **obligatoires** :
+
+```js
+let name, age
+
+({ name, age } = user) // OK
+{ name, age } = user   // SyntaxError
+```
+
+Pour un objet imbriqué, on imbrique les accolades :
+
+```js
+const user = { name: "Jean", address: { city: "Lyon", zip: "69000" } }
+
+const {
+  name,
+  address: { city, zip },
+} = user
+// name = "Jean", city = "Lyon", zip = "69000"
+```
+
+`address` n'est pas assigné comme variable, il sert uniquement à naviguer dans la structure.
+
+## Copie d'objets
 
 Quand on copie un objet ou un tableau, il faut distinguer deux comportements selon la méthode utilisée.
 
