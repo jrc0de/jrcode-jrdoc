@@ -30,3 +30,12 @@
 - `!` pour inverser un Boolean
 - `&&` pour vérifier que deux conditions sont vraies (ET)
 - `||` pour vérifier qu'au moins une condition est vraie (OU)
+
+## Opérateur de décomposition
+
+L'opérateur de décomposition (_spread operator_) permet de **copier**, **fusionner** ou **étendre** des tableaux et des objets en JavaScript. Il s’écrit avec trois points : `...`
+
+```js
+const a = [1, 2, 3]
+const copie = [0, ...a, 4] // [0, 1, 2, 3, 4]
+```
