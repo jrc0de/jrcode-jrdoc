@@ -38,4 +38,8 @@ L'opérateur de décomposition (_spread operator_) permet de **copier**, **fusio
 ```js
 const a = [1, 2, 3]
 const copie = [0, ...a, 4] // [0, 1, 2, 3, 4]
+
+const b = { x: 1, y: 2 }
+const c = { y: 99, z: 3 }
+const fusion = { ...b, ...c } // { x: 1, y: 99, z: 3 }
 ```
