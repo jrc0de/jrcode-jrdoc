@@ -28,6 +28,12 @@ features:
     icon:
       src: /img/css.svg
 
+  - title: Markdown
+    details: Langage de balisage léger pour rédiger du contenu textuel.
+    link: /markdown
+    icon:
+      src: /img/md.svg
+
   - title: Bun
     details: Runtime JavaScript et gestionnaire de paquets tout-en-un.
     link: /bun
@@ -46,12 +52,6 @@ features:
     icon:
       src: /img/capacitor.svg
 
-  - title: VSCode
-    details: Logiciel d'édition de code.
-    link: /vscode
-    icon:
-      src: /img/vscode.svg
-
   - title: Git
     details: Gestionnaire de versions distribué.
     link: /git
@@ -64,9 +64,15 @@ features:
     icon:
       src: /img/zsh.svg
 
-  - title: Markdown
-    details: Langage de balisage léger pour rédiger du contenu textuel.
-    link: /markdown
+  - title: VSCode
+    details: Logiciel d'édition de code.
+    link: /vscode
     icon:
-      src: /img/md.svg
+      src: /img/vscode.svg
+
+  - title: Photopea
+    details: Éditeur d’images gratuit, pour la retouche photo et le design.
+    link: /photopea
+    icon:
+      src: /img/photopea.png
 ---

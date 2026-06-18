@@ -22,9 +22,10 @@ export default defineConfig({
         text: "Outils",
         items: [
           { text: "Bun", link: "/bun" },
-          { text: "VSCode", link: "/vscode" },
           { text: "Git", link: "/git" },
           { text: "Zsh", link: "/zsh" },
+          { text: "VSCode", link: "/vscode" },
+          { text: "Photopea", link: "/photopea" },
         ],
       },
       {
