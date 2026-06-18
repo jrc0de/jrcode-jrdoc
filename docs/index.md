@@ -71,7 +71,7 @@ features:
       src: /img/vscode.svg
 
   - title: Photopea
-    details: Éditeur d’images gratuit, pour la retouche photo et le design.
+    details: Éditeur d’images, pour la retouche photo et le design.
     link: /photopea
     icon:
       src: /img/photopea.png
