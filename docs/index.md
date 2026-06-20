@@ -28,6 +28,12 @@ features:
     icon:
       src: /img/css.svg
 
+  - title: SQL
+    details: Langage standard de requêtes utilisé par les bases de données relationnelles comme PostgreSQL.
+    link: /sql
+    icon:
+      src: /img/postgresql.svg
+
   - title: Markdown
     details: Langage de balisage léger pour rédiger du contenu textuel.
     link: /markdown

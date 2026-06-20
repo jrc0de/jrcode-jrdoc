@@ -15,6 +15,7 @@ export default defineConfig({
           { text: "JavaScript", link: "/javascript/variables" },
           { text: "HTML", link: "/html/fondamentaux" },
           { text: "CSS", link: "/css" },
+          { text: "SQL", link: "/sql" },
           { text: "Markdown", link: "/markdown" },
         ],
       },
