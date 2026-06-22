@@ -79,7 +79,10 @@ export default defineConfig({
       "/sql/": [
         {
           text: "SQL",
-          items: [{ text: "Types de données", link: "/sql/types" }],
+          items: [
+            { text: "Basiques", link: "/sql/basiques" },
+            { text: "Types de données", link: "/sql/types" },
+          ],
         },
       ],
     },
