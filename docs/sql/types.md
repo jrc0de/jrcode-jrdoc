@@ -31,8 +31,8 @@
 - **Utilisation** : seul type acceptable pour les montants monétaires, taux et tout calcul où la précision doit être garantie
 
 ```sql
-prix     numeric(10, 2) -- jusqu'à 99 999 999.99
-taux_tva numeric(5, 4) -- ex: 0.2000 pour 20%
+prix : numeric(10, 2) -- jusqu'à 99 999 999.99
+taux_tva : numeric(5, 4) -- ex: 0.2000 pour 20%
 ```
 
 ### Types à virgule flottante
@@ -92,7 +92,7 @@ taux_tva numeric(5, 4) -- ex: 0.2000 pour 20%
 ### `uuid`
 
 - **Taille** : 16 octets
-- **Utilisation** : identifiant universel unique — alternative à `integer` en clé primaire quand on veut éviter des IDs séquentiels prévisibles
+- **Utilisation** : identifiant universel unique — en clé primaire quand on veut éviter des IDs séquentiels prévisibles, ou pour tout identifiant unique non séquentiel (token, clé d'API, identifiant de session...)
 
 ## Types JSON
 
