@@ -76,6 +76,12 @@ export default defineConfig({
           ],
         },
       ],
+      "/sql/": [
+        {
+          text: "SQL",
+          items: [{ text: "Types de données", link: "/sql/types" }],
+        },
+      ],
     },
   },
 })

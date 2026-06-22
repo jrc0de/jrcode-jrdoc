@@ -30,7 +30,7 @@ features:
 
   - title: SQL
     details: Langage standard de requêtes utilisé par les bases de données relationnelles comme PostgreSQL.
-    link: /sql
+    link: /sql/types
     icon:
       src: /img/postgresql.svg
 
