@@ -32,7 +32,7 @@
 
 ```sql
 prix : numeric(10, 2) -- jusqu'à 99 999 999.99
-taux_tva : numeric(5, 4) -- ex: 0.2000 pour 20%
+taux_tva : numeric(5, 4) -- 0.2000 pour 20%
 ```
 
 ### Types à virgule flottante
