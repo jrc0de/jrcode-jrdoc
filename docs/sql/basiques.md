@@ -20,17 +20,18 @@ Toutes les instructions SQL doivent se terminer par `;` pour être exécutées.
 
 ## Remplir une table
 
-L'instruction `INSERT` est utilisée pour remplir une table avec des lignes. Les constantes qui ne sont pas des valeurs numériques simples doivent être habituellement entourées par des guillemets simples.
+L'instruction `INSERT` est utilisée pour remplir une table avec des lignes. Les constantes qui ne sont pas des valeurs numériques simples doivent être entourées par des guillemets simples.
 
 ```sql
-INSERT INTO weather VALUES ('Paris', 21, 32, 0.25, '2020-07-22');
+INSERT INTO weather
+VALUES ('Paris', 21, 32, 0.25, '2020-07-22');
 ```
 
 Une syntaxe alternative permet de lister les colonnes dans un ordre différent si on le souhaite, et d'en omettre certaines :
 
 ```sql
 INSERT INTO weather (observed_on, city, temp_hi, temp_lo)
-    VALUES ('2021-04-26', 'Lyon', 14, 8);
+VALUES ('2021-04-26', 'Lyon', 14, 8);
 ```
 
 On peut aussi utiliser `COPY` pour charger de grandes quantités de données depuis un fichier texte, avec les valeurs séparées par des tabulations :
@@ -93,17 +94,35 @@ SELECT DISTINCT city
 FROM weather;
 ```
 
-## Supprimer une table
+## Mises à jour
 
-Pour supprimer une table on utilise l'instruction `DROP TABLE`.
+On peut mettre à jour une ligne existante en utilisant l'instruction `UPDATE` :
+
+```sql
+UPDATE weather
+SET temp_hi = temp_hi - 2,  temp_lo = temp_lo - 2
+WHERE observed_on > '2000-01-01';
+```
+
+## Suppressions
+
+Les lignes peuvent être supprimées de la table avec l'instruction `DELETE` :
+
+```sql
+DELETE FROM weather WHERE city = 'Brest';
+```
+
+::: tip
+Faire très attention aux instructions de la forme `DELETE FROM table_name;`. Sans une qualification, `DELETE` supprimera toutes les lignes de la table donnée, la laissant vide. Le système le fera sans demander de confirmation !
+:::
+
+Pour supprimer une table on utilise l'instruction `DROP TABLE` :
 
 ```sql
 DROP TABLE table_name;
 ```
 
-## Les commentaires
-
-## Les commentaires
+## Commentaires
 
 Pour rédiger un commentaire sur une seule ligne on emploie `--` :
 
