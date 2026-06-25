@@ -46,6 +46,12 @@ features:
     icon:
       src: /img/bun.svg
 
+  - title: Vue.js
+    details: Framework JavaScript évolutif pour construire des interfaces utilisateur.
+    link: /vue
+    icon:
+      src: /img/vue.svg
+
   - title: Ionic
     details: Le SDK mobile pour le web.
     link: /ionic

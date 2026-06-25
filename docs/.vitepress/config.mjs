@@ -5,18 +5,25 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   title: "JRDoc",
   description: "Web dev doc",
-  appearance: "force-dark",
   themeConfig: {
+    socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
     nav: [
-      { text: "JRCode", link: "https://jrcode.cloud/" },
       {
         text: "Langages",
         items: [
           { text: "JavaScript", link: "/javascript/variables" },
           { text: "HTML", link: "/html/fondamentaux" },
           { text: "CSS", link: "/css" },
-          { text: "SQL", link: "/sql" },
+          { text: "SQL", link: "/sql/basiques" },
           { text: "Markdown", link: "/markdown" },
+        ],
+      },
+      {
+        text: "Frameworks",
+        items: [
+          { text: "Vue.js", link: "/vue" },
+          { text: "Ionic", link: "/ionic" },
+          { text: "Capacitor", link: "/capacitor" },
         ],
       },
       {
@@ -27,13 +34,6 @@ export default defineConfig({
           { text: "Zsh", link: "/zsh" },
           { text: "VSCode", link: "/vscode" },
           { text: "Photopea", link: "/photopea" },
-        ],
-      },
-      {
-        text: "Mobile",
-        items: [
-          { text: "Ionic", link: "/ionic" },
-          { text: "Capacitor", link: "/capacitor" },
         ],
       },
     ],
