@@ -26,6 +26,7 @@ git push --force # Forcer le push (écrase l'historique distant)
 
 ```bash
 git branch # Afficher les branches locales
+git branch -a # Afficher les branches locales et distantes
 git branch <name> # Créer une branche
 git checkout <name> # Changer de branche
 git merge <name> # Fusionner une branche (commit de fusion)
