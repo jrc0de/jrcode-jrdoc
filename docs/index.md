@@ -38,7 +38,7 @@ features:
     details: Langage de balisage léger pour rédiger du contenu textuel.
     link: /markdown
     icon:
-      src: /img/md.svg
+      src: /img/markdown.png
 
   - title: Bun
     details: Runtime JavaScript et gestionnaire de paquets tout-en-un.
@@ -74,7 +74,7 @@ features:
     details: Shell Unix dérivé de Bash pour le terminal et les scripts.
     link: /zsh
     icon:
-      src: /img/zsh.svg
+      src: /img/zsh.png
 
   - title: VSCode
     details: Logiciel d'édition de code.

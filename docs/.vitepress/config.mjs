@@ -5,6 +5,7 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   title: "JRDoc",
   description: "Web dev doc",
+  appearance: "force-dark",
   themeConfig: {
     socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
     nav: [
