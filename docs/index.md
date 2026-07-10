@@ -87,4 +87,10 @@ features:
     link: /photopea
     icon:
       src: /img/photopea.png
+
+  - title: MEI
+    details: Format XML pour l'encodage de partitions musicales.
+    link: /mei
+    icon:
+      src: /img/mei.png
 ---
