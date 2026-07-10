@@ -3,6 +3,9 @@
   "configVersion": 1,
   "workspaces": {
     "": {
+      "dependencies": {
+        "verovio": "^6.2.0",
+      },
       "devDependencies": {
         "oxfmt": "^0.58.0",
         "oxlint": "^1.73.0",
@@ -426,6 +429,8 @@
     "unist-util-visit": ["unist-util-visit@5.1.0", "", { "dependencies": { "@types/unist": "^3.0.0", "unist-util-is": "^6.0.0", "unist-util-visit-parents": "^6.0.0" } }, "sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg=="],
 
     "unist-util-visit-parents": ["unist-util-visit-parents@6.0.2", "", { "dependencies": { "@types/unist": "^3.0.0", "unist-util-is": "^6.0.0" } }, "sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ=="],
+
+    "verovio": ["verovio@6.2.0", "", {}, "sha512-yYU4CAik+ln4tdDOSLJPypQ24fiRsJtNgmgobsPnrSQYxesjwLrrPvth4mumeBRh3S20VERw9+GPXpRyhT1R4A=="],
 
     "vfile": ["vfile@6.0.3", "", { "dependencies": { "@types/unist": "^3.0.0", "vfile-message": "^4.0.0" } }, "sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q=="],
 

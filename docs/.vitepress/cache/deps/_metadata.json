@@ -1,40 +1,49 @@
 {
-  "hash": "929c3c14",
-  "configHash": "3f039f0a",
+  "hash": "ddf753d0",
+  "configHash": "a4f5815c",
   "lockfileHash": "e3b0c442",
-  "browserHash": "17059315",
+  "browserHash": "996cec8b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3ef35194",
+      "fileHash": "0f73c279",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "661e3f86",
+      "fileHash": "ad35995a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "f1a20318",
+      "fileHash": "733ee2a1",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "826693a0",
+    "verovio/wasm": {
+      "src": "../../../../node_modules/verovio/dist/verovio-module.mjs",
+      "file": "verovio_wasm.js",
+      "fileHash": "7057bb6d",
+      "needsInterop": false
+    },
+    "verovio/esm": {
+      "src": "../../../../node_modules/verovio/dist/verovio.mjs",
+      "file": "verovio_esm.js",
+      "fileHash": "7d8e5352",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-HKT4NZKT": {
-      "file": "chunk-HKT4NZKT.js"
-    },
     "chunk-ITVJ6X5I": {
       "file": "chunk-ITVJ6X5I.js"
+    },
+    "node_module-D4EJA35X": {
+      "file": "node_module-D4EJA35X.js"
+    },
+    "chunk-JVWSFFO4": {
+      "file": "chunk-JVWSFFO4.js"
     }
   }
 }
