@@ -90,7 +90,7 @@ features:
 
   - title: MEI
     details: Format XML pour l'encodage de partitions musicales.
-    link: /mei
+    link: /mei/introduction
     icon:
       src: /img/mei.png
 ---

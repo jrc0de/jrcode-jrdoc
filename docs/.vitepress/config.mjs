@@ -17,6 +17,7 @@ export default defineConfig({
           { text: "CSS", link: "/css" },
           { text: "SQL", link: "/sql/basiques" },
           { text: "Markdown", link: "/markdown" },
+          { text: "MEI", link: "/mei" },
         ],
       },
       {
@@ -83,6 +84,16 @@ export default defineConfig({
           items: [
             { text: "Basiques", link: "/sql/basiques" },
             { text: "Types de données", link: "/sql/types" },
+          ],
+        },
+      ],
+      "/mei/": [
+        {
+          text: "MEI",
+          items: [
+            { text: "Introduction", link: "/mei/introduction" },
+            { text: "Notes", link: "/mei/notes" },
+            { text: "Paroles", link: "/mei/lyrics" },
           ],
         },
       ],
