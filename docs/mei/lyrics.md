@@ -12,7 +12,7 @@ propose deux attributs dédiés sur `<syl>` :
 ```xml
 <note pname="a" oct="4" dur="4">
     <verse n="1">
-        <syl wordpos="i" con="d">chan</syl>
+        <syl wordpos="i" con="d">Chan</syl>
     </verse>
 </note>
 <note pname="a" oct="4" dur="4">
@@ -26,6 +26,41 @@ propose deux attributs dédiés sur `<syl>` :
   <MeiViewer :meiContent="tiret" />
 </ClientOnly>
 
+## Directives
+
+Certaines indications textuelles, comme les rubriques identifiant qui chante
+(« Verset », « Refrain »...), ne font pas partie du texte chanté. Plutôt que de
+les mêler aux paroles, MEI propose l'élément `<dir>` (directive), une indication textuelle indépendante placée
+au-dessus ou en dessous de la portée.
+
+`<dir>` s'ancre à une note précise via `@startid`, et se positionne avec
+`@place` :
+
+```xml
+<measure>
+    <staff n="1">
+        <layer>
+            <note xml:id="n1" pname="a" oct="4" dur="4">
+                <verse n="1">
+                    <syl wordpos="i" con="d">Chan</syl>
+                </verse>
+            </note>
+            <note pname="a" oct="4" dur="4">
+                <verse n="1">
+                    <syl wordpos="t">tons</syl>
+                </verse>
+            </note>
+        </layer>
+    </staff>
+    <dir place="above" startid="#n1">Verset :</dir>
+</measure>
+```
+
+<ClientOnly>
+  <MeiViewer :meiContent="directive" />
+</ClientOnly>
+
 <script setup>
 import tiret from './scores/tiret.mei?raw'
+import directive from './scores/directive.mei?raw'
 </script>

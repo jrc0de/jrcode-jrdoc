@@ -20,7 +20,7 @@
                         <measure>
                             <staff n="1">
                                 <layer>
-                                    <note pname="a" oct="4" dur="4">
+                                    <note xml:id="n1" pname="a" oct="4" dur="4">
                                         <verse n="1">
                                             <syl wordpos="i" con="d">Chan</syl>
                                         </verse>
@@ -32,6 +32,7 @@
                                     </note>
                                 </layer>
                             </staff>
+                            <dir place="above" startid="#n1">Verset :</dir>
                         </measure>
                     </section>
                 </score>
