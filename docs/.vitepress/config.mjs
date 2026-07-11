@@ -100,6 +100,12 @@ export default defineConfig({
           ],
         },
       ],
+      "/vue/": [
+        {
+          text: "Vue.js",
+          items: [{ text: "Syntaxe de template", link: "/vue/templating" }],
+        },
+      ],
     },
   },
 })
