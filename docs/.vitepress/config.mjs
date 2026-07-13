@@ -95,7 +95,8 @@ export default defineConfig({
           text: "MEI",
           items: [
             { text: "Introduction", link: "/mei/introduction" },
-            { text: "Notes", link: "/mei/notes" },
+            { text: "Portées et clés", link: "/mei/staves" },
+            { text: "Notes et durées", link: "/mei/notes" },
             { text: "Paroles", link: "/mei/lyrics" },
           ],
         },
