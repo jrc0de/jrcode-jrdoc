@@ -20,13 +20,13 @@ export default defineConfig({
           { text: "CSS", link: "/css" },
           { text: "SQL", link: "/sql/basiques" },
           { text: "Markdown", link: "/markdown" },
-          { text: "MEI", link: "/mei" },
+          { text: "MEI", link: "/mei/introduction" },
         ],
       },
       {
         text: "Frameworks",
         items: [
-          { text: "Vue.js", link: "/vue" },
+          { text: "Vue.js", link: "/vue/templating" },
           { text: "Ionic", link: "/ionic" },
           { text: "Capacitor", link: "/capacitor" },
         ],
