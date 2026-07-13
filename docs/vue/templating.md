@@ -72,3 +72,15 @@ L'attribut _disabled_ sera inclus si _isButtonDisabled_ a une valeur évaluée �
   <button :disabled="isButtonDisabled">Button</button>
 </template>
 ```
+
+## Expressions JavaScript
+
+Dans les templates Vue, les expressions JavaScript peuvent être utilisées dans les interpolations de texte (_Moustache_) et dans les valeurs d'attribut de toutes les directives Vue (attributs spéciaux qui commencent par `v-`)
+
+```vue
+<template>
+  <span>Résultat : {{ number + 1 }}</span>
+  <span>Réponse : {{ ok ? "YES" : "NO" }}</span>
+  <button :class="isActive ? 'active' : 'inactive'">Button</button>
+</template>
+```
