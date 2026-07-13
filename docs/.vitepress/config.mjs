@@ -7,6 +7,9 @@ export default defineConfig({
   description: "Web dev doc",
   appearance: "force-dark",
   themeConfig: {
+    footer: {
+      copyright: "© 2026 JRCode",
+    },
     socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
     nav: [
       {
