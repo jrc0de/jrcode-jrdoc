@@ -7,6 +7,7 @@ export default defineConfig({
   description: "Web dev doc",
   appearance: "force-dark",
   themeConfig: {
+    logo: "/img/rocket.png",
     footer: {
       copyright: "© 2026 JRCode",
     },
