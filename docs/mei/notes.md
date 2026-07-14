@@ -1,6 +1,8 @@
 # Notes et durées
 
-Une note en MEI est représentée par l'élément `<note>`, dont les attributs principaux décrivent la hauteur et la durée.
+<ClientOnly>
+  <MeiViewer :meiContent="notes_1" />
+</ClientOnly>
 
 ```xml
 <layer>
@@ -8,9 +10,7 @@ Une note en MEI est représentée par l'élément `<note>`, dont les attributs p
 </layer>
 ```
 
-<ClientOnly>
-  <MeiViewer :meiContent="notes_1" />
-</ClientOnly>
+Une note est représentée par l'élément `<note>`, dont les attributs principaux décrivent la hauteur et la durée.
 
 ## Attributs de hauteur
 
