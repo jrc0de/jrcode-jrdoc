@@ -3,7 +3,7 @@
 ::: tip Format MEI
 MEI signifie _Music Encoding Initiative_. C'est un format XML ouvert et
 standardisé pour l'encodage structuré de partitions musicales (hauteurs, durées,
-articulations, paroles, structure de la partition...).
+articulations, paroles...).
 :::
 
 ::: tip Verovio
@@ -23,11 +23,11 @@ représentation graphique.
 
 L'élément racine `<mei>` porte l'attribut `@xmlns`, qui déclare l'espace de noms du document et indique aux outils (comme Verovio) que ce document suit le vocabulaire MEI.
 
-L'en-tête `<meiHead>` contient les métadonnées du document (titre, auteur, source...).
+Le bloc d'en-tête `<meiHead>` contient les métadonnées du document (titre, auteur, source...).
 
-L'élément `<music>` contient le contenu musical proprement dit.
+Le bloc musique `<music>` contient le contenu musical proprement dit.
 
-## En-tête
+## Bloc d'en-tête
 
 ```xml
 <meiHead>
@@ -40,13 +40,12 @@ L'élément `<music>` contient le contenu musical proprement dit.
 </meiHead>
 ```
 
-La description du fichier `<fileDesc>` permet une description bibliographique complète d'un fichier MEI.
+L'élément de description du fichier `<fileDesc>` est le seul élément obligatoire du bloc d'en-tête. Il permet une description bibliographique complète d'un fichier MEI et doit contenir à minima :
 
-L'élément `<titleStmt>` porte le titre de l'œuvre et les métadonnées de responsabilité. Le titre est donné via le sous-élément obligatoire `<title>` qui peut rester vide.
+- `<titleStmt>` pour le titre de l'œuvre (via `<title>` qui peut rester vide mais est obligatoire également) et les métadonnées de responsabilité.
+- `<pubStmt>` pour les informations de publication comme le nom et l'adresse de l'éditeur, la date de publication et d'autres détails pertinents. Sa présence est obligatoire mais il peut rester vide.
 
-L'élément `<pubStmt>` porte les informations de publication comme le nom et l'adresse de l'éditeur, la date de publication et d'autres détails pertinents.
-
-## Musique
+## Bloc musique
 
 ```xml
 <music>
@@ -61,8 +60,11 @@ L'élément `<pubStmt>` porte les informations de publication comme le nom et l'
 </music>
 ```
 
-À l'intérieur de `<music>`, la partition s'imbrique dans `<body>`, puis `<mdiv>` (une division de la partition, utile si le document en contient plusieurs), puis `<score>`.
+L'élément `<body>` est unique et obligatoire. Il sert de conteneur racine pour l'ensemble du contenu musical.
 
-`<scoreDef>` porte la définition globale des portées (clé, nombre de lignes...).
+L'élément `<mdiv>` représente une division de la partition (mouvement, acte, scène...). Il est obligatoire et peut être répété ou imbriqué pour représenter les subdivisions de l'œuvre.
 
-`<section>` contient le contenu musical, découpé en mesures.
+L'élément `<score>` contient la partition complète. Il est obligatoire et se compose de deux parties :
+
+- `<scoreDef>` pour la définition globale des portées et des clés. Sa présence est obligatoire.
+- `<section>` pour le contenu musical constitué des différentes mesures et leurs notes. Sa présence est obligatoire.
