@@ -99,6 +99,7 @@ export default defineConfig({
             { text: "Portées et clés", link: "/mei/staves" },
             { text: "Notes et durées", link: "/mei/notes" },
             { text: "Paroles", link: "/mei/lyrics" },
+            { text: "Verovio", link: "/mei/verovio" },
           ],
         },
       ],
