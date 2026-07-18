@@ -11,7 +11,6 @@ export default defineConfig({
     footer: {
       copyright: "© 2026 JRCode",
     },
-    socialLinks: [{ icon: "github", link: "https://github.com/jrc0de" }],
     nav: [
       {
         text: "Langages",
@@ -28,8 +27,7 @@ export default defineConfig({
         text: "Frameworks",
         items: [
           { text: "Vue.js", link: "/vue/templating" },
-          { text: "Ionic", link: "/ionic" },
-          { text: "Capacitor", link: "/capacitor" },
+          { text: "Ionic", link: "/ionic/ionic" },
         ],
       },
       {
@@ -88,6 +86,15 @@ export default defineConfig({
           items: [
             { text: "Basiques", link: "/sql/basiques" },
             { text: "Types de données", link: "/sql/types" },
+          ],
+        },
+      ],
+      "/ionic/": [
+        {
+          text: "Ionic",
+          items: [
+            { text: "Ionic framework", link: "/ionic/ionic" },
+            { text: "Capacitor", link: "/ionic/capacitor" },
           ],
         },
       ],

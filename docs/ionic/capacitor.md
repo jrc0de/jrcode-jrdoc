@@ -1,5 +1,9 @@
 # Capacitor
 
+::: tip Capacitor
+Pont natif qui encapsule une application web dans un conteneur iOS/Android et donne accès aux API natives du téléphone (caméra, GPS, notifications, etc.).
+:::
+
 ## CLI
 
 #### Installer la dernière version du CLI Capacitor

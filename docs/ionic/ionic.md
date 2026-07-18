@@ -1,4 +1,8 @@
-# Ionic
+# Ionic framework
+
+::: tip Ionic Framework
+Bibliothèque de composants UI (boutons, listes, menus, etc.) permettant de construire des interfaces mobiles avec les technologies web (HTML, CSS, JS) et compatible avec Vue.js.
+:::
 
 ## CLI
 

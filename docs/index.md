@@ -23,13 +23,13 @@ features:
       src: /img/html.svg
 
   - title: CSS
-    details: Langage de style pour la mise en forme et la mise en page des interfaces web.
+    details: Langage de style pour la mise en forme des interfaces web.
     link: /css
     icon:
       src: /img/css.svg
 
   - title: SQL
-    details: Langage standard de requêtes utilisé par les bases de données relationnelles comme PostgreSQL.
+    details: Langage de requêtes pour bases de données relationnelles.
     link: /sql/basiques
     icon:
       src: /img/postgresql.svg
@@ -53,16 +53,10 @@ features:
       src: /img/vue.svg
 
   - title: Ionic
-    details: Le SDK mobile pour le web.
-    link: /ionic
+    details: Écosystème web pour apps mobiles multiplateformes.
+    link: /ionic/ionic
     icon:
       src: /img/ionic.svg
-
-  - title: Capacitor
-    details: Runtime natif multiplateforme pour les applications web.
-    link: /capacitor
-    icon:
-      src: /img/capacitor.svg
 
   - title: Git
     details: Gestionnaire de versions distribué.
