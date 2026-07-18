@@ -8,7 +8,7 @@
 
 ```xml
 <scoreDef>
-    <staffGrp>
+    <staffGrp symbol="brace" bar.thru="true">
         <staffDef n="1" lines="5" clef.shape="G" clef.line="2" />
         <staffDef n="2" lines="5" clef.shape="F" clef.line="4" />
     </staffGrp>
@@ -46,18 +46,18 @@ La définition des portées se fait dans `<scoreDef>`, via les éléments :
 </scoreDef>
 ```
 
-Le nom d'une portée passe par le sous-élément `<label>`, à ne pas confondre avec un attribut. Il s'affiche à gauche de la portée, sur le premier système de la partition. Pour les systèmes suivants, on peut fournir une version abrégée avec `<labelAbbr>` : Verovio affiche alors `<label>` sur le premier système et `<labelAbbr>` sur les suivants — pratique pour une partition à plusieurs pages où répéter le nom complet à chaque ligne prendrait trop de place.
+Le nom d'une portée passe par le sous-élément `<label>`, à ne pas confondre avec un attribut. Il s'affiche à gauche de la portée, sur le premier système de la partition.
 
-## Attributs de `<staffGrp>`
+Pour les systèmes suivants, on peut fournir une version abrégée avec `<labelAbbr>` : Verovio affiche alors `<label>` sur le premier système et `<labelAbbr>` sur les suivants.
+
+## Attributs de groupement de portées
 
 | Attribut    | Description                                                                             | Valeurs possibles                                                                                           |
 | ----------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `@symbol`   | Symbole visuel reliant les portées du groupe                                            | `brace` (accolade), `bracket` (crochet arrondi), `bracketsq` (crochet droit), `line` (simple trait), `none` |
 | `@bar.thru` | Indique si les barres de mesure traversent tout le groupe ou s'arrêtent à chaque portée | `true` (barres continues), `false` (barres indépendantes par portée)                                        |
 
-Pour un chœur, on utilise généralement `symbol="bracket"` et `bar.thru="true"`, comme dans l'exemple ci-dessus.
-
-## Attributs de `<staffDef>`
+## Attributs de portée individuelle
 
 | Attribut      | Description                        | Valeurs possibles                                         |
 | ------------- | ---------------------------------- | --------------------------------------------------------- |

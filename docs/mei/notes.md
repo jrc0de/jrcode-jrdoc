@@ -18,9 +18,9 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 
 | Attribut | Description | Valeurs possibles                                                     |
 | -------- | ----------- | --------------------------------------------------------------------- |
-| `pname`  | Nom         | `c` (do), `d` (ré), `e` (mi), `f` (fa), `g` (sol), `a` (la), `b` (si) |
-| `oct`    | Octave      | `0` à `9` (avec `4` pour l'octave du do central)                      |
-| `accid`  | Altération  | `s` (dièse), `f` (bémol), `n` (bécarre)                               |
+| `@pname` | Nom         | `c` (do), `d` (ré), `e` (mi), `f` (fa), `g` (sol), `a` (la), `b` (si) |
+| `@oct`   | Octave      | `0` à `9` (avec `4` pour l'octave du do central)                      |
+| `@accid` | Altération  | `s` (dièse), `f` (bémol), `n` (bécarre)                               |
 
 ## Attributs de durée
 
