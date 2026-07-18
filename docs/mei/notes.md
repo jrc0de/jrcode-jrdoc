@@ -37,6 +37,12 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 | `@stem.dir`     | Direction de la hampe forcée | `up` (vers le haut), `down` (vers le bas) |
 | `@stem.visible` | Affichage de la hampe        | `true`, `false`                           |
 
+## Attributs d'articulation
+
+| Attribut | Description  | Valeurs possibles                                                    |
+| -------- | ------------ | -------------------------------------------------------------------- |
+| `@artic` | Articulation | `acc` (accent), `stacc` (staccato), `ten` (tenuto), `marc` (marcato) |
+
 ## Groupement de croches
 
 <ClientOnly>
