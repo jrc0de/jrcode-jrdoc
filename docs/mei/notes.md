@@ -24,18 +24,18 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 
 ## Attributs de durée
 
-| Attribut  | Description                     | Valeurs possibles                                                                    |
-| --------- | ------------------------------- | ------------------------------------------------------------------------------------ |
-| `dur`     | Durée de la note                | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
-| `dots`    | Nombre de points d'augmentation | `0`, `1`, `2`, `3`                                                                   |
-| `dur.ges` | Durée gestuelle (réelle)        | même syntaxe que `dur`                                                               |
+| Attribut   | Description                     | Valeurs possibles                                                                    |
+| ---------- | ------------------------------- | ------------------------------------------------------------------------------------ |
+| `@dur`     | Durée de la note                | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
+| `@dots`    | Nombre de points d'augmentation | `0`, `1`, `2`, `3`                                                                   |
+| `@dur.ges` | Durée gestuelle (réelle)        | même syntaxe que `@dur`                                                              |
 
 ## Attributs de hampe
 
-| Attribut       | Description                  | Valeurs possibles                         |
-| -------------- | ---------------------------- | ----------------------------------------- |
-| `stem.dir`     | Direction de la hampe forcée | `up` (vers le haut), `down` (vers le bas) |
-| `stem.visible` | Affichage de la hampe        | `true`, `false`                           |
+| Attribut        | Description                  | Valeurs possibles                         |
+| --------------- | ---------------------------- | ----------------------------------------- |
+| `@stem.dir`     | Direction de la hampe forcée | `up` (vers le haut), `down` (vers le bas) |
+| `@stem.visible` | Affichage de la hampe        | `true`, `false`                           |
 
 ## Groupement de croches
 
@@ -68,7 +68,7 @@ L'élément `<beam>` regroupe visuellement plusieurs notes de courte durée (cro
 </layer>
 ```
 
-Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes attributs de durée que `<note>` (`dur`, `dots`, `dur.ges`), mais sans hauteur puisqu'il ne produit aucun son.
+Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes attributs de durée que `<note>` (`@dur`, `@dots`, `@dur.ges`), mais sans hauteur puisqu'il ne produit aucun son.
 
 ## Espacement invisible
 
@@ -84,7 +84,7 @@ Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes att
 </layer>
 ```
 
-L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (ni note, ni silence visible). Il utilise la même syntaxe de durée que `<note>` (`dur`, `dots`...). On l'emploie typiquement pour aligner des voix entre elles sans ajouter un silence visuellement superflu.
+L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (ni note, ni silence visible). Il utilise la même syntaxe de durée que `<note>` (`@dur`, `@dots`...). On l'emploie typiquement pour aligner des voix entre elles sans ajouter un silence visuellement superflu.
 
 <script setup>
 import notes_1 from './scores/notes_1.mei?raw'

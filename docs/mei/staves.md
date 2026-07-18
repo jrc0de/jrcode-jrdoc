@@ -50,21 +50,21 @@ Le nom d'une portée passe par le sous-élément `<label>`, à ne pas confondre 
 
 ## Attributs de `<staffGrp>`
 
-| Attribut   | Description                                                                             | Valeurs possibles                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `symbol`   | Symbole visuel reliant les portées du groupe                                            | `brace` (accolade), `bracket` (crochet arrondi), `bracketsq` (crochet droit), `line` (simple trait), `none` |
-| `bar.thru` | Indique si les barres de mesure traversent tout le groupe ou s'arrêtent à chaque portée | `true` (barres continues), `false` (barres indépendantes par portée)                                        |
+| Attribut    | Description                                                                             | Valeurs possibles                                                                                           |
+| ----------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `@symbol`   | Symbole visuel reliant les portées du groupe                                            | `brace` (accolade), `bracket` (crochet arrondi), `bracketsq` (crochet droit), `line` (simple trait), `none` |
+| `@bar.thru` | Indique si les barres de mesure traversent tout le groupe ou s'arrêtent à chaque portée | `true` (barres continues), `false` (barres indépendantes par portée)                                        |
 
 Pour un chœur, on utilise généralement `symbol="bracket"` et `bar.thru="true"`, comme dans l'exemple ci-dessus.
 
 ## Attributs de `<staffDef>`
 
-| Attribut     | Description                        | Valeurs possibles                                         |
-| ------------ | ---------------------------------- | --------------------------------------------------------- |
-| `n`          | Numéro de la portée                | entier (`1`, `2`...), utilisé pour référencer la portée   |
-| `lines`      | Nombre de lignes de la portée      | `5` par défaut, `1` pour une portée rythmique par exemple |
-| `clef.shape` | Forme de la clé                    | `G` (clé de sol), `F` (clé de fa), `C` (clé d'ut)         |
-| `clef.line`  | Ligne sur laquelle se place la clé | `1` à `5`, selon la position de référence de la clé       |
+| Attribut      | Description                        | Valeurs possibles                                         |
+| ------------- | ---------------------------------- | --------------------------------------------------------- |
+| `@n`          | Numéro de la portée                | entier (`1`, `2`...), utilisé pour référencer la portée   |
+| `@lines`      | Nombre de lignes de la portée      | `5` par défaut, `1` pour une portée rythmique par exemple |
+| `@clef.shape` | Forme de la clé                    | `G` (clé de sol), `F` (clé de fa), `C` (clé d'ut)         |
+| `@bclef.line` | Ligne sur laquelle se place la clé | `1` à `5`, selon la position de référence de la clé       |
 
 <script setup>
 import staves_1 from './scores/staves_1.mei?raw'
