@@ -60,7 +60,7 @@ features:
 
   - title: Git
     details: Gestionnaire de versions distribué.
-    link: /git
+    link: /git/starting
     icon:
       src: /img/git.svg
 
