@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "mermaid": "^11.16.0",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17"
   }

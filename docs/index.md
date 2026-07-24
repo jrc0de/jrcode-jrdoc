@@ -24,7 +24,7 @@ features:
 
   - title: CSS
     details: Langage de style pour la mise en forme des interfaces web.
-    link: /css
+    link: /css/introduction
     icon:
       src: /img/css.svg
 

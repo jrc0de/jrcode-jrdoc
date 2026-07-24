@@ -32,6 +32,7 @@ gitGraph
    commit id: "A"
    commit id: "B"
 ```
+
 ## Git revert
 
 Annuler un commit précis en créant un nouveau commit qui inverse ses changements, sans réécrire l'historique :

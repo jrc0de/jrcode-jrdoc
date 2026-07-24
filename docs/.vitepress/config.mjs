@@ -18,7 +18,7 @@ export default withMermaid(
           items: [
             { text: "JavaScript", link: "/javascript/variables" },
             { text: "HTML", link: "/html/fondamentaux" },
-            { text: "CSS", link: "/css" },
+            { text: "CSS", link: "/css/introduction" },
             { text: "SQL", link: "/sql/basiques" },
             { text: "Markdown", link: "/markdown" },
             { text: "MEI", link: "/mei/introduction" },
@@ -78,6 +78,15 @@ export default withMermaid(
               { text: "Fondamentaux", link: "/html/fondamentaux" },
               { text: "Eléments", link: "/html/elements" },
               { text: "Commentaires", link: "/html/commentaires" },
+            ],
+          },
+        ],
+        "/css/": [
+          {
+            text: "CSS",
+            items: [
+              { text: "Introduction", link: "/css/introduction" },
+              { text: "Divers", link: "/css/divers" },
             ],
           },
         ],

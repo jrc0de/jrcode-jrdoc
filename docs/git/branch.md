@@ -7,6 +7,7 @@ git branch # afficher les branches locales
 git branch -a # afficher les branches locales et distantes
 git branch <name> # créer une branche
 ```
+
 ## Git checkout
 
 ```bash
