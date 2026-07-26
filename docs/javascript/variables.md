@@ -15,7 +15,7 @@ Avec **const**, la variable ne peut pas être réassignée :
 
 ```js
 const year = 1990
-year = 2000 // ERROR !
+year = 2000 // Error [!code error]
 ```
 
 Par convention, les constantes pour les valeurs fixes connues à l'avance s'écrivent en majuscules :
@@ -210,7 +210,7 @@ Sans déclaration, les accolades sont interprétées comme un bloc de code. Les 
 let name, age
 
 ({ name, age } = user) // OK
-{ name, age } = user   // SyntaxError
+{ name, age } = user   // Error // [!code error]
 ```
 
 Pour un objet imbriqué, on imbrique les accolades :
