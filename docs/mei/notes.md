@@ -1,8 +1,8 @@
 # Notes et durées
 
-<ClientOnly>
-  <MeiViewer :meiContent="notes_1" />
-</ClientOnly>
+## Structure de base
+
+Une note est représentée par l'élément `<note>`, dont les attributs principaux décrivent la hauteur et la durée.
 
 ```xml
 <layer>
@@ -12,42 +12,32 @@
 </layer>
 ```
 
-Une note est représentée par l'élément `<note>`, dont les attributs principaux décrivent la hauteur et la durée.
+<ClientOnly>
+  <MeiViewer :meiContent="notes_1" />
+</ClientOnly>
 
-## Attributs de hauteur
+# Attributs de note
 
-| Attribut | Description | Valeurs possibles                                                     |
-| -------- | ----------- | --------------------------------------------------------------------- |
-| `@pname` | Nom         | `c` (do), `d` (ré), `e` (mi), `f` (fa), `g` (sol), `a` (la), `b` (si) |
-| `@oct`   | Octave      | `0` à `9` (avec `4` pour l'octave du do central)                      |
-| `@accid` | Altération  | `s` (dièse), `f` (bémol), `n` (bécarre)                               |
-
-## Attributs de durée
-
-| Attribut   | Description                     | Valeurs possibles                                                                    |
-| ---------- | ------------------------------- | ------------------------------------------------------------------------------------ |
-| `@dur`     | Durée de la note                | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
-| `@dots`    | Nombre de points d'augmentation | `0`, `1`, `2`, `3`                                                                   |
-| `@dur.ges` | Durée gestuelle (réelle)        | même syntaxe que `@dur`                                                              |
-
-## Attributs de hampe
-
-| Attribut        | Description                  | Valeurs possibles                         |
-| --------------- | ---------------------------- | ----------------------------------------- |
-| `@stem.dir`     | Direction de la hampe forcée | `up` (vers le haut), `down` (vers le bas) |
-| `@stem.visible` | Affichage de la hampe        | `true`, `false`                           |
-
-## Attributs d'articulation
-
-| Attribut | Description  | Valeurs possibles                                                    |
-| -------- | ------------ | -------------------------------------------------------------------- |
-| `@artic` | Articulation | `acc` (accent), `stacc` (staccato), `ten` (tenuto), `marc` (marcato) |
+| Attribut        | Description                     | Valeurs possibles                                                                    |
+| --------------- | ------------------------------- | ------------------------------------------------------------------------------------ |
+| `@accid`        | Altération                      | `s` (dièse), `f` (bémol), `n` (bécarre)                                              |
+| `@artic`        | Articulation                    | `acc` (accent), `stacc` (staccato), `ten` (tenuto), `marc` (marcato)                 |
+| `@cue`          | Note de petite taille           | `true`, `false`                                                                      |
+| `@dots`         | Nombre de points d'augmentation | `0`, `1`, `2`, `3`                                                                   |
+| `@dur`          | Durée de la note                | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
+| `@dur.ges`      | Durée gestuelle (réelle)        | Même syntaxe que `@dur`                                                              |
+| `@head.visible` | Affichage de la tête de note    | `true`, `false`                                                                      |
+| `@n`            | Numéro de note                  | Texte libre (type `1`, `2`, `3`)                                                     |
+| `@oct`          | Octave                          | `0` à `9` (`4` pour l'octave contenant le do central)                                |
+| `@pname`        | Nom de la note                  | `c` (do), `d` (ré), `e` (mi), `f` (fa), `g` (sol), `a` (la), `b` (si)                |
+| `@stem.dir`     | Direction forcée de la hampe    | `up` (vers le haut), `down` (vers le bas)                                            |
+| `@stem.visible` | Affichage de la hampe           | `true`, `false`                                                                      |
+| `@visible`      | Visibilité globale de la note   | `true`, `false`                                                                      |
+| `@xml:id`       | Identifiant unique de l'élément | Texte libre (type `n1`, `n2`, `n3`)                                                  |
 
 ## Groupement de croches
 
-<ClientOnly>
-  <MeiViewer :meiContent="notes_2" />
-</ClientOnly>
+L'élément `<beam>` regroupe visuellement plusieurs notes de courte durée (croches et plus rapides) en les reliant par une ou plusieurs barres horizontales, à la place des crochets individuels. Il suffit d'envelopper les `<note>` concernées dans un `<beam>`.
 
 ```xml
 <layer>
@@ -58,13 +48,13 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 </layer>
 ```
 
-L'élément `<beam>` regroupe visuellement plusieurs notes de courte durée (croches et plus rapides) en les reliant par une ou plusieurs barres horizontales, à la place des crochets individuels. Il suffit d'envelopper les `<note>` concernées dans un `<beam>`.
+<ClientOnly>
+  <MeiViewer :meiContent="notes_2" />
+</ClientOnly>
 
 ## Silences
 
-<ClientOnly>
-  <MeiViewer :meiContent="notes_4" />
-</ClientOnly>
+Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes attributs de durée que `<note>` (`@dur`), mais sans hauteur puisqu'il ne produit aucun son.
 
 ```xml
 <layer>
@@ -74,13 +64,13 @@ L'élément `<beam>` regroupe visuellement plusieurs notes de courte durée (cro
 </layer>
 ```
 
-Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes attributs de durée que `<note>` (`@dur`, `@dots`, `@dur.ges`), mais sans hauteur puisqu'il ne produit aucun son.
-
-## Espacement invisible
-
 <ClientOnly>
-  <MeiViewer :meiContent="notes_3" />
+  <MeiViewer :meiContent="notes_4" />
 </ClientOnly>
+
+## Espacements
+
+L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (ni note, ni silence visible). Il utilise la même syntaxe de durée que `<note>` (`@dur`).
 
 ```xml
 <layer>
@@ -90,7 +80,9 @@ Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes att
 </layer>
 ```
 
-L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (ni note, ni silence visible). Il utilise la même syntaxe de durée que `<note>` (`@dur`, `@dots`...). On l'emploie typiquement pour aligner des voix entre elles sans ajouter un silence visuellement superflu.
+<ClientOnly>
+  <MeiViewer :meiContent="notes_3" />
+</ClientOnly>
 
 <script setup>
 import notes_1 from './scores/notes_1.mei?raw'

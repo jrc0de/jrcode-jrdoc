@@ -28,7 +28,7 @@ Chaque mesure est représentée par l'élément `<measure>` qui est un sous-él�
 | -------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `@n`     | Numéro de la mesure              | entier (`1`, `2`...)                                                                                                                                    |
 | `@right` | Type de barre en fin de mesure   | `dbl` (double), `end` (finale), `rptstart` (début de reprise), `rptend` (fin de reprise), `dashed` (tirets), `dotted` (pointillés), `invis` (invisible) |
-| `@left`  | Type de barre en début de mesure | même valeurs que `@right`                                                                                                                               |
+| `@left`  | Type de barre en début de mesure | même valeurs que pour `@right`                                                                                                                          |
 
 <script setup>
 import measures_1 from './scores/measures_1.mei?raw'
