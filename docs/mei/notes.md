@@ -6,9 +6,9 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 
 ```xml
 <layer>
-    <note pname="c" oct="4" dur="4"/>
-    <note pname="f" oct="4" accid="s" dur="4"/>
-    <note pname="b" oct="4" dur="2"/>
+    <note pname="c" oct="4" dur="4"/> <!-- [!code highlight] -->
+    <note pname="f" oct="4" accid="s" dur="4"/> <!-- [!code highlight] -->
+    <note pname="b" oct="4" dur="2"/> <!-- [!code highlight] -->
 </layer>
 ```
 
@@ -41,10 +41,10 @@ L'élément `<beam>` regroupe visuellement plusieurs notes de courte durée (cro
 
 ```xml
 <layer>
-    <beam>
+    <beam> <!-- [!code highlight] -->
         <note pname="e" oct="4" dur="8"/>
         <note pname="f" oct="4" dur="8"/>
-    </beam>
+    </beam> <!-- [!code highlight] -->
 </layer>
 ```
 
@@ -59,7 +59,7 @@ Un silence est représenté par l'élément `<rest>`, qui utilise les mêmes att
 ```xml
 <layer>
     <note pname="c" oct="4" dur="4"/>
-    <rest dur="4"/>
+    <rest dur="4"/> <!-- [!code highlight] -->
     <note pname="e" oct="4" dur="2"/>
 </layer>
 ```
@@ -75,7 +75,7 @@ L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (
 ```xml
 <layer>
     <note pname="c" oct="4" dur="4"/>
-    <space dur="4"/>
+    <space dur="4"/> <!-- [!code highlight] -->
     <note pname="e" oct="4" dur="4"/>
 </layer>
 ```
@@ -84,9 +84,42 @@ L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (
   <MeiViewer :meiContent="notes_3" />
 </ClientOnly>
 
+## Directives
+
+Certaines indications textuelles, comme les rubriques identifiant qui chante
+(« Verset », « Refrain »...), ne font pas partie du texte chanté. Plutôt que de
+les mêler aux paroles, MEI propose l'élément `<dir>` (directive), une indication textuelle indépendante placée
+au-dessus ou en dessous de la portée. Cette directive s'ancre à une note précise via `@startid`, et se positionne avec
+`@place`
+
+```xml
+<measure>
+    <staff n="1">
+        <layer>
+            <note xml:id="n1" pname="a" oct="4" dur="4"> <!-- [!code highlight] -->
+                <verse n="1">
+                    <syl wordpos="i" con="d">Chan</syl>
+                </verse>
+            </note>
+            <note pname="a" oct="4" dur="4">
+                <verse n="1">
+                    <syl wordpos="t">tons</syl>
+                </verse>
+            </note>
+        </layer>
+    </staff>
+    <dir place="above" startid="#n1">Verset :</dir> <!-- [!code highlight] -->
+</measure>
+```
+
+<ClientOnly>
+  <MeiViewer :meiContent="directive" />
+</ClientOnly>
+
 <script setup>
 import notes_1 from './scores/notes_1.mei?raw'
 import notes_2 from './scores/notes_2.mei?raw'
 import notes_3 from './scores/notes_3.mei?raw'
 import notes_4 from './scores/notes_4.mei?raw'
+import directive from './scores/directive.mei?raw'
 </script>

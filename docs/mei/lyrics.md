@@ -1,23 +1,34 @@
 # Paroles
 
-## Liaison des syllabes
+## Structure de base
 
-<ClientOnly>
-  <MeiViewer :meiContent="tiret" />
-</ClientOnly>
+Pour associer des paroles à une mélodie, chaque `<note>` reçoit un élément `<verse>`
+(le couplet, numéroté avec `@n`), qui contient lui-même un élément `<syl>` portant
+le texte de la syllabe chantée sur cette note.
 
 ```xml
-<note pname="a" oct="4" dur="4">
-    <verse n="1">
-        <syl wordpos="i" con="d">Chan</syl>
-    </verse>
+<note pname="c" oct="4" dur="4">
+    <verse n="1"> <!-- [!code highlight] -->
+        <syl>Do</syl> <!-- [!code highlight] -->
+    </verse> <!-- [!code highlight] -->
 </note>
-<note pname="a" oct="4" dur="4">
-    <verse n="1">
-        <syl wordpos="t">tons</syl>
-    </verse>
+<note pname="d" oct="4" dur="4">
+    <verse n="1"> <!-- [!code highlight] -->
+        <syl>Ré</syl> <!-- [!code highlight] -->
+    </verse> <!-- [!code highlight] -->
+</note>
+<note pname="e" oct="4" dur="4">
+    <verse n="1"> <!-- [!code highlight] -->
+        <syl>Mi</syl> <!-- [!code highlight] -->
+    </verse> <!-- [!code highlight] -->
 </note>
 ```
+
+<ClientOnly>
+  <MeiViewer :meiContent="lyric1" />
+</ClientOnly>
+
+## Liaison des syllabes
 
 Une syllabe peut être répartie sur plusieurs notes. Plutôt que d'insérer un tiret directement dans le texte, MEI
 propose deux attributs dédiés sur `<syl>` :
@@ -27,39 +38,24 @@ propose deux attributs dédiés sur `<syl>` :
 
 - **`@con`** : le type de connecteur à afficher entre les syllabes (`d` pour un tiret)
 
-## Directives
-
-<ClientOnly>
-  <MeiViewer :meiContent="directive" />
-</ClientOnly>
-
 ```xml
-<measure>
-    <staff n="1">
-        <layer>
-            <note xml:id="n1" pname="a" oct="4" dur="4">
-                <verse n="1">
-                    <syl wordpos="i" con="d">Chan</syl>
-                </verse>
-            </note>
-            <note pname="a" oct="4" dur="4">
-                <verse n="1">
-                    <syl wordpos="t">tons</syl>
-                </verse>
-            </note>
-        </layer>
-    </staff>
-    <dir place="above" startid="#n1">Verset :</dir>
-</measure>
+<note pname="a" oct="4" dur="4">
+    <verse n="1">
+        <syl wordpos="i" con="d">Chan</syl> <!-- [!code highlight] -->
+    </verse>
+</note>
+<note pname="a" oct="4" dur="4">
+    <verse n="1">
+        <syl wordpos="t">tons</syl> <!-- [!code highlight] -->
+    </verse>
+</note>
 ```
 
-Certaines indications textuelles, comme les rubriques identifiant qui chante
-(« Verset », « Refrain »...), ne font pas partie du texte chanté. Plutôt que de
-les mêler aux paroles, MEI propose l'élément `<dir>` (directive), une indication textuelle indépendante placée
-au-dessus ou en dessous de la portée. Cette directive s'ancre à une note précise via `@startid`, et se positionne avec
-`@place`
+<ClientOnly>
+  <MeiViewer :meiContent="tiret" />
+</ClientOnly>
 
 <script setup>
+import lyric1 from './scores/lyric1.mei?raw'
 import tiret from './scores/tiret.mei?raw'
-import directive from './scores/directive.mei?raw'
 </script>
