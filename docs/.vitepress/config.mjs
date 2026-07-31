@@ -135,7 +135,10 @@ export default withMermaid(
         "/vue/": [
           {
             text: "Vue.js",
-            items: [{ text: "Syntaxe de template", link: "/vue/templating" }],
+            items: [
+              { text: "Structure de base", link: "/vue/structure" },
+              { text: "Syntaxe de template", link: "/vue/templating" },
+            ],
           },
         ],
       },

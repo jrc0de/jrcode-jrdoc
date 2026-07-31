@@ -48,7 +48,7 @@ features:
 
   - title: Vue.js
     details: Framework JavaScript évolutif pour construire des interfaces utilisateur.
-    link: /vue/templating
+    link: /vue/structure
     icon:
       src: /img/vue.svg
 
