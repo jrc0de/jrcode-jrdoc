@@ -55,7 +55,32 @@ propose deux attributs dédiés sur `<syl>` :
   <MeiViewer :meiContent="tiret" />
 </ClientOnly>
 
+## Mélisme
+
+Un mélisme se produit lorsqu'une seule syllabe est chantée sur plusieurs notes. Contrairement à la liaison des
+syllabes, aucune nouvelle syllabe n'apparaît sur les notes suivantes : elles prolongent
+simplement le même `<syl>`. Ce regroupement se matérialise visuellement par une liaison de phrasé, l'élément
+`<slur>`, ancré aux notes concernées via `@startid` et `@endid`.
+
+```xml
+<layer>
+    <note xml:id="n1" pname="c" oct="4" dur="8">
+        <verse n="1">
+            <syl>A</syl> <!-- [!code highlight] -->
+        </verse>
+    </note>
+    <note xml:id="n2" pname="d" oct="4" dur="8"/>
+    <note xml:id="n3" pname="e" oct="4" dur="4"/>
+</layer>
+<slur startid="#n1" endid="#n3"/> <!-- [!code highlight] -->
+```
+
+<ClientOnly>
+  <MeiViewer :meiContent="melisme" />
+</ClientOnly>
+
 <script setup>
 import lyric1 from './scores/lyric1.mei?raw'
 import tiret from './scores/tiret.mei?raw'
+import melisme from './scores/melisme.mei?raw'
 </script>
