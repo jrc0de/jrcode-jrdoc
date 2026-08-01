@@ -55,6 +55,27 @@ propose deux attributs dédiés sur `<syl>` :
   <MeiViewer :meiContent="tiret" />
 </ClientOnly>
 
+## Élision
+
+Une élision se produit lorsque deux syllabes de mots différents sont chantées sur une seule note. Elle est mise en oeuvre via l'attribut `@con` sur la première syllabe.
+
+```xml
+<note pname="g" oct="4" dur="4">
+    <verse n="1">
+        <syl con="b">A</syl> <!-- [!code highlight] -->
+    </verse>
+</note>
+<note pname="a" oct="4" dur="4">
+    <verse n="1">
+        <syl>B</syl>
+    </verse>
+</note>
+```
+
+<ClientOnly>
+  <MeiViewer :meiContent="elision" />
+</ClientOnly>
+
 ## Mélisme
 
 Un mélisme se produit lorsqu'une seule syllabe est chantée sur plusieurs notes. Contrairement à la liaison des
@@ -83,4 +104,5 @@ simplement le même `<syl>`. Ce regroupement se matérialise visuellement par un
 import lyric1 from './scores/lyric1.mei?raw'
 import tiret from './scores/tiret.mei?raw'
 import melisme from './scores/melisme.mei?raw'
+import elision from './scores/elision.mei?raw'
 </script>
