@@ -1,8 +1,29 @@
-# Structure de base d'un projet
+# Structure d'un projet
+
+## Schéma de la structure
+
+Voici le schéma de la structure typique d'un projet Vue :
+
+```
+my-project/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── router/
+│   │   └── index.js
+│   ├── views/
+│   ├── App.vue
+│   └── main.js
+├── index.html
+├── package.json
+└── vite.config.js
+```
 
 ## Fichier `index.html`
 
-À la racine du projet se trouve le fichier `index.html` qui sert de point d'entrée de l'application. Il contient la structure minimale d'une page HTML et une `<div>` vide (conventionnellement nommée `app`) sur laquelle va se greffer toute notre application. La balise `<script>` pointe quant à elle vers `main.js`, dont nous allons voir le rôle.
+C'est le point d'entrée de l'application. Il contient la structure minimale d'une page HTML et une `<div>` vide (conventionnellement nommée `app`) sur laquelle va se greffer toute notre application. La balise `<script>` pointe quant à elle vers `main.js`, dont nous allons voir le rôle.
 
 ```html
 <!DOCTYPE html>
@@ -22,7 +43,7 @@
 
 ## Fichier `main.js`
 
-Le fichier `main.js`, situé dans le dossier `src`, est le point d'entrée côté JavaScript. C'est lui qui crée l'instance de l'application Vue, y enregistre les plugins nécessaires, et la connecte à la `<div id="app">` définie dans `index.html`.
+C'est le point d'entrée côté JavaScript. C'est lui qui crée l'instance de l'application Vue, y enregistre les plugins nécessaires, et la connecte à la `<div id="app">` définie dans `index.html`.
 
 ```js
 import { createApp } from "vue"
@@ -36,4 +57,25 @@ app.use(router)
 app.mount("#app")
 ```
 
-La fonction `createApp` prend en argument le composant racine de l'application (ici `App`, importé depuis `App.vue`). L'instance ainsi créée est d'abord stockée dans la variable `app`, ce qui permet d'y enregistrer des plugins avant le montage. C'est le cas ici avec `app.use(router)`, qui enregistre _Vue Router_, la librairie officielle de gestion des routes de Vue que nous détaillerons dans une section dédiée.
+- `createApp` est une fonction qui prend en argument le composant racine de l'application. L'instance ainsi créée est d'abord stockée dans la variable `app`, ce qui permet d'y enregistrer des plugins avant le montage.
+- `app.use(router)` enregistre _Vue Router_, la librairie officielle de gestion des routes de Vue que nous détaillerons dans une section dédiée.
+
+## Fichier `App.vue`
+
+C'est le composant racine de l'application. Il s'agit du squelette commun à toutes les pages dans lequel _Vue Router_ va afficher le composant correspondant à l'URL courante.
+
+```vue
+<template>
+  <header>
+    <nav>
+      <RouterLink to="/">Accueil</RouterLink>
+      <RouterLink to="/about">À propos</RouterLink>
+    </nav>
+  </header>
+
+  <RouterView />
+</template>
+```
+
+- `<RouterView />` est un emplacement réservé fourni par _Vue Router_ qui affiche automatiquement le composant associé à la route active.
+- `<RouterLink>` remplace quant à lui les liens `<a>` classiques pour naviguer entre les routes sans recharger la page. Le reste du template (ici le `<header>`) reste affiché en permanence, quelle que soit la route active.
