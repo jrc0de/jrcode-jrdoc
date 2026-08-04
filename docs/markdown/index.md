@@ -31,7 +31,7 @@ Mon second paragraphe, séparé par une ligne vide.
 ### Emphase
 
 ```markdown
-_italique_ ou _italique_
+*italique* ou _italique_
 **gras**
 **_gras et italique_**
 ```
