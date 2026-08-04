@@ -116,6 +116,18 @@ au-dessus ou en dessous de la portée. Cette directive s'ancre à une note préc
   <MeiViewer :meiContent="directive" />
 </ClientOnly>
 
+## Articulation comme élément
+
+En plus de l'attribut `@artic` porté directement par `<note>`, l'articulation peut s'exprimer sous la forme d'un élément enfant `<artic>`. Cette forme est notamment utile pour contrôler la position de l'articulation via l'attribut `@place` (`above`, `below`).
+
+```xml
+<layer>
+    <note pname="f" oct="4" dur="4">
+        <artic artic="acc" place="above"/> <!-- [!code highlight] -->
+    </note>
+</layer>
+```
+
 <script setup>
 import notes_1 from './scores/notes_1.mei?raw'
 import notes_2 from './scores/notes_2.mei?raw'
