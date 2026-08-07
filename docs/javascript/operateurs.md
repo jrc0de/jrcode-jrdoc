@@ -31,6 +31,34 @@
 - `&&` pour vérifier que deux conditions sont vraies (ET)
 - `||` pour vérifier qu'au moins une condition est vraie (OU)
 
+## Le _short-circuiting_
+
+Les opérateurs `&&` et `||` n'évaluent pas forcément les deux membres de l'expression : dès que le résultat final est connu, JavaScript s'arrête et renvoie la valeur correspondante (et non forcément `true` ou `false`).
+
+```js
+// || renvoie la première valeur "truthy" rencontrée,
+// sinon la dernière valeur
+console.log(false || "salut") // 'salut'
+console.log("hello" || "salut") // 'hello' (jamais évalué "salut")
+console.log(0 || "") // '' (les deux sont falsy)
+
+// && renvoie la première valeur "falsy" rencontrée,
+// sinon la dernière valeur
+console.log(true && "salut") // 'salut'
+console.log(false && "salut") // false (jamais évalué "salut")
+console.log(0 && "salut") // 0
+```
+
+Ce comportement est très utilisé en pratique :
+
+```js
+// Définir une valeur par défaut
+const pseudo = user.pseudo || "Anonyme"
+
+// N'exécuter une fonction que si une condition est vraie
+isConnected && afficherMenu()
+```
+
 ## Opérateur _spread_
 
 L'opérateur de décomposition (_spread operator_) permet de **copier**, **fusionner** ou **étendre** des tableaux et des objets en JavaScript. Il s’écrit avec trois points : `...`.
