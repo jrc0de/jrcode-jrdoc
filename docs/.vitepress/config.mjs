@@ -86,6 +86,7 @@ export default withMermaid(
             text: "CSS",
             items: [
               { text: "Introduction", link: "/css/introduction" },
+              { text: "Styliser les textes", link: "/css/text" },
               { text: "Divers", link: "/css/divers" },
             ],
           },
