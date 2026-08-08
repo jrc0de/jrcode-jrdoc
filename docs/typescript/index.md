@@ -33,3 +33,11 @@ let prenom = "Alice" // TypeScript déduit : string
 // Le type est "verrouillé" ensuite même sans annotation explicite
 age = "twenty" // Error [!code error]
 ```
+
+## Typer les parametres d'une fonction
+
+```ts
+function add(a: number, b = 5) {
+  return a + b
+}
+```
