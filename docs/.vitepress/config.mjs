@@ -129,6 +129,7 @@ export default withMermaid(
               { text: "Mesures", link: "/mei/measures" },
               { text: "Notes et durées", link: "/mei/notes" },
               { text: "Paroles", link: "/mei/lyrics" },
+              { text: "Mise en page", link: "/mei/layout" },
             ],
           },
         ],

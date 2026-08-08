@@ -85,6 +85,32 @@ L'élément `<space>` réserve la durée indiquée sans afficher aucun symbole (
   <MeiViewer :meiContent="notes_3" />
 </ClientOnly>
 
+## Respirations
+
+Une respiration est représentée par l'élément `<breath>`. Il est placé dans la mesure et peut être positionné de différentes manières :
+
+- `@startid` permet de l'ancrer à un élément musical précis ;
+- `@tstamp` permet de définir sa position temporelle dans la mesure, exprimée en unités de temps.
+
+```xml
+<measure>
+    <staff n="1">
+        <layer>
+            <note xml:id="n1" pname="c" oct="4" dur="4" />
+            <note pname="d" oct="4" dur="4" />
+            <note pname="e" oct="4" dur="2" />
+        </layer>
+    </staff>
+    <breath staff="1" startid="#n1"/> <!-- [!code highlight] -->
+    <!-- ou -->
+    <breath staff="1" tstamp="2.8" /> <!-- [!code highlight] -->
+</measure>
+```
+
+<ClientOnly>
+  <MeiViewer :meiContent="breath" />
+</ClientOnly>
+
 ## Directives
 
 Certaines indications textuelles, comme les rubriques identifiant qui chante
@@ -133,5 +159,6 @@ import notes_1 from './scores/notes_1.mei?raw'
 import notes_2 from './scores/notes_2.mei?raw'
 import notes_3 from './scores/notes_3.mei?raw'
 import notes_4 from './scores/notes_4.mei?raw'
+import breath from './scores/breath.mei?raw'
 import directive from './scores/directive.mei?raw'
 </script>
