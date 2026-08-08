@@ -11,10 +11,16 @@ hero:
 
 features:
   - title: JavaScript
-    details: Langage de programmation dynamique pour le web côté client et serveur.
+    details: Langage de programmation dynamique pour le web et le scripting.
     link: /javascript/variables
     icon:
       src: /img/javascript.svg
+
+  - title: TypeScript
+    details: Superset du langage JavaScript avec système de typage statique.
+    link: /typescript/index
+    icon:
+      src: /img/typescript.svg
 
   - title: HTML
     details: Langage de balisage structurant le contenu des pages web.

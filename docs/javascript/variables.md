@@ -243,7 +243,7 @@ userCopy.name = "Marc"
 console.log(user.name) // "Marc" — l'original est modifié !
 ```
 
-### Shallow copy (copie superficielle)
+### _Shallow copy_ (copie superficielle)
 
 Une shallow copy crée un **nouvel objet** avec les mêmes propriétés de premier niveau. Mais si l'objet contient des valeurs de type objet (objets imbriqués, tableaux...), celles-ci restent **partagées** entre l'original et la copie.
 
@@ -259,7 +259,7 @@ userCopy.address.city = "Lyon"
 console.log(user.address.city) // "Lyon" — objet imbriqué, toujours partagé !
 ```
 
-### Deep copy (copie profonde)
+### _Deep copy_ (copie profonde)
 
 Une deep copy crée un **nouvel objet indépendant** à tous les niveaux, y compris les objets imbriqués. Aucune référence n'est partagée avec l'original.
 
