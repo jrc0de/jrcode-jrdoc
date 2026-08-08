@@ -57,17 +57,12 @@ propose deux attributs dédiés sur `<syl>` :
 
 ## Élision
 
-Une élision se produit lorsque deux syllabes de mots différents sont chantées sur une seule note. Elle est mise en oeuvre via l'attribut `@con` sur la première syllabe.
+Une élision se produit lorsque la dernière syllabe d'un mot et la première syllabe du mot suivant sont chantées sur une même note. En MEI, elle est indiquée avec l'attribut `@con` sur la première syllabe.
 
 ```xml
 <note pname="g" oct="4" dur="4">
     <verse n="1">
         <syl con="b">A</syl> <!-- [!code highlight] -->
-    </verse>
-</note>
-<note pname="a" oct="4" dur="4">
-    <verse n="1">
-        <syl>B</syl>
     </verse>
 </note>
 ```
@@ -78,22 +73,23 @@ Une élision se produit lorsque deux syllabes de mots différents sont chantées
 
 ## Mélisme
 
-Un mélisme se produit lorsqu'une seule syllabe est chantée sur plusieurs notes. Contrairement à la liaison des
-syllabes, aucune nouvelle syllabe n'apparaît sur les notes suivantes : elles prolongent
-simplement le même `<syl>`. Ce regroupement se matérialise visuellement par une liaison de phrasé, l'élément
-`<slur>`, ancré aux notes concernées via `@startid` et `@endid`.
+Un mélisme se produit lorsqu'une seule syllabe est chantée sur plusieurs notes. Ce regroupement se matérialise visuellement par une liaison de phrasé : l'élément `<slur>` ancré aux notes concernées via `@startid` et `@endid`.
 
 ```xml
-<layer>
-    <note xml:id="n1" pname="c" oct="4" dur="8">
-        <verse n="1">
-            <syl>A</syl> <!-- [!code highlight] -->
-        </verse>
-    </note>
-    <note xml:id="n2" pname="d" oct="4" dur="8"/>
-    <note xml:id="n3" pname="e" oct="4" dur="4"/>
-</layer>
-<slur startid="#n1" endid="#n3"/> <!-- [!code highlight] -->
+<measure n="1">
+    <staff n="1">
+        <layer>
+            <note xml:id="n1" pname="c" oct="4" dur="8">
+                <verse n="1">
+                    <syl>A</syl>
+                </verse>
+            </note>
+            <note xml:id="n2" pname="d" oct="4" dur="8" />
+            <note xml:id="n3" pname="e" oct="4" dur="4" />
+        </layer>
+    </staff>
+    <slur startid="#n1" endid="#n3" /> <!-- [!code highlight] -->
+</measure>
 ```
 
 <ClientOnly>

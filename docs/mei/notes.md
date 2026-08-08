@@ -16,7 +16,7 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
   <MeiViewer :meiContent="notes_1" />
 </ClientOnly>
 
-# Attributs de note
+## Attributs de note
 
 | Attribut        | Description                     | Valeurs possibles                                                                    |
 | --------------- | ------------------------------- | ------------------------------------------------------------------------------------ |
@@ -26,6 +26,7 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 | `@dots`         | Nombre de points d'augmentation | `0`, `1`, `2`, `3`                                                                   |
 | `@dur`          | Durée de la note                | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
 | `@dur.ges`      | Durée gestuelle (réelle)        | Même syntaxe que `@dur`                                                              |
+| `@fermata`      | Point d'orgue                   | `above` (au-dessus), `below` (en dessous)                                            |
 | `@head.visible` | Affichage de la tête de note    | `true`, `false`                                                                      |
 | `@n`            | Numéro de note                  | Texte libre (type `1`, `2`, `3`)                                                     |
 | `@oct`          | Octave                          | `0` à `9` (`4` pour l'octave contenant le do central)                                |
@@ -116,16 +117,15 @@ au-dessus ou en dessous de la portée. Cette directive s'ancre à une note préc
   <MeiViewer :meiContent="directive" />
 </ClientOnly>
 
-## Articulation comme élément
+## Attributs comme éléments
 
-En plus de l'attribut `@artic` porté directement par `<note>`, l'articulation peut s'exprimer sous la forme d'un élément enfant `<artic>`. Cette forme est notamment utile pour contrôler la position de l'articulation via l'attribut `@place` (`above`, `below`).
+En plus des attributs portés directement par `<note>`, certains attributs d'articulation peuvent s'exprimer sous la forme d'éléments enfants de `<note>`. Cette syntaxe est notamment utile pour contrôler la position de l'articulation via l'attribut `@place` (`above`, `below`).
 
 ```xml
-<layer>
-    <note pname="f" oct="4" dur="4">
-        <artic artic="acc" place="above"/> <!-- [!code highlight] -->
-    </note>
-</layer>
+<note pname="f" oct="4" dur="4">
+    <artic artic="acc" place="above"/> <!-- [!code highlight] -->
+    <artic artic="ten" place="below"/> <!-- [!code highlight] -->
+</note>
 ```
 
 <script setup>
