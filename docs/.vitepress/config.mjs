@@ -75,8 +75,9 @@ export default withMermaid(
           {
             text: "TypeScript",
             items: [
-              { text: "Variables simples", link: "/typescript/variables" },
-              { text: "Tableaux", link: "/typescript/tables" },
+              { text: "Types primitifs", link: "/typescript/primitives" },
+              { text: "Types particuliers", link: "/typescript/special" },
+              { text: "Tableaux", link: "/typescript/arrays" },
               { text: "Objets", link: "/typescript/objects" },
               { text: "Fonctions", link: "/typescript/functions" },
             ],

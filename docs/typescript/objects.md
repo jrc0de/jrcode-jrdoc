@@ -35,3 +35,14 @@ let user: { name: string; age?: number } = {
   name: "Alice",
 }
 ```
+
+## Les _Record_
+
+`Record<K, V>` sert à typer un objet dont on connaît le type des clés et des valeurs, mais pas forcément leur nombre ni leur nom exact à l'avance.
+
+```ts
+let scores: Record<string, number>
+
+scores.alice = 42 // OK, on peut ajouter des clés
+scores.charlie = "quarante" // Error [!code error]
+```
