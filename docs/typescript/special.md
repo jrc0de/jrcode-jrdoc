@@ -67,6 +67,33 @@ enum Color {
 }
 ```
 
+## Type _literal_
+
+Un type literal restreint une variable à une ou plusieurs valeurs exactes, plutôt qu'à un type large comme `string` ou `number`. Cela fonctionne aussi avec des nombres ou des booléens.
+
+```ts
+let direction: "left" | "right"
+direction = "left" // OK
+direction = "right" // OK
+direction = "up" // Error [!code error]
+
+let diceRoll: 1 | 2 | 3 | 4 | 5 | 6
+diceRoll = 4 // OK
+diceRoll = 7 // Error [!code error]
+```
+
 ::: tip Astuce
-Pour la plupart des cas simples, un type union de chaînes littérales (`"active" | "inactive" | "waiting"`) est souvent préféré aux `enum` en TypeScript moderne : plus léger, plus facile à inspecter, et sans le comportement particulier des enums numériques. Les `enum` restent utiles quand on veut regrouper les valeurs sous un même espace de noms (`State.Active`).
+Le type _literal_ une alternative plus légère au type _enum_ pour représenter un ensemble de valeurs fixes : pas d'objet généré à l'exécution, juste une vérification au niveau du typage.
 :::
+
+## Type _aliases_
+
+Le mot-clé `type` permet de nommer un type composé, pour le réutiliser sans avoir à le répéter partout. C'est particulièrement utile pour les objets, pour éviter de retaper la même structure à chaque déclaration.
+
+```ts
+type Direction = "left" | "right"
+type User = { name: string; age: number; facing: Direction }
+
+let user1: User = { name: "Alice", age: 25, facing: "left" }
+let user2: User = { name: "Bob", age: 30, facing: "up" } // Error [!code error]
+```
