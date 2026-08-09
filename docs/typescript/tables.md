@@ -36,7 +36,7 @@ On peut aussi combiner plusieurs types dans un tableau grâce au type union :
 let mix: (string | number)[] = [1, "two", 3]
 ```
 
-## Syntaxe alternative : type générique
+## Syntaxe alternative
 
 Il existe une syntaxe alternative avec `Array<type>`, appelée syntaxe générique. Elle est strictement équivalente à `type[]`, c'est simplement une question de préférence stylistique.
 
