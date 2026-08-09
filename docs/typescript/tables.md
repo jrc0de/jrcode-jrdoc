@@ -45,3 +45,18 @@ let cards: Array<number> = [1, 2, 3]
 let names: Array<string> = ["Alice", "Bob"]
 let mix: Array<string | number> = [1, "two", 3]
 ```
+
+## Les tuples
+
+Un tuple est un tableau de longueur fixe où le type de chaque position est défini précisément, contrairement à `number[]` où tous les éléments sont du même type et la longueur est libre. C'est utile quand on veut représenter une structure fixe, comme une paire clé/valeur ou des coordonnées
+
+```ts
+let user: [string, number] = ["Alice", 25]
+
+user = [25, "Alice"] // Error [!code error]
+user = ["Alice", 25, true] // Error [!code error]
+```
+
+::: warning Avertissement
+TypeScript n'empêche pas d'appeler `.push()` sur un tuple. C'est une limitation connue du système de types à garder en tête.
+:::

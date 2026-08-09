@@ -10,7 +10,7 @@ export default withMermaid(
     themeConfig: {
       logo: "/img/rocket.png",
       footer: {
-        copyright: "© 2026 JRCode",
+        copyright: "© 2026 ⚡ JRCode",
       },
       nav: [
         {

@@ -42,7 +42,7 @@ data = true // OK aussi
 data = { name: "Alice" } // OK aussi
 ```
 
-::: warning À éviter
+::: warning Avertissement
 Le type `any` désactive la vérification de type de TypeScript. Cela annule l'intérêt même du langage : les erreurs qu'il devrait détecter à l'écriture du code ne le seront plus. À n'utiliser qu'en dernier recours.
 :::
 
