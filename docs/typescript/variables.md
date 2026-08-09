@@ -57,3 +57,16 @@ id = 42 // OK
 id = "abc123" // OK
 id = true // Error [!code error]
 ```
+
+## Type _empty object_
+
+Le type `{}`, malgré son nom informel "objet vide", n'est pas propre aux objets : c'est un type à part entière, utilisable partout (variable, paramètre de fonction, etc.), qui signifie "n'importe quelle valeur sauf `null` et `undefined`".
+
+```ts
+let obj: {} = { name: "Alice" }
+
+obj = "hello" // OK ?!
+obj = 42 // OK ?!
+obj = null // Error [!code error]
+obj = undefined // Error [!code error]
+```
