@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -18,7 +17,7 @@ features:
 
   - title: TypeScript
     details: Superset du langage JavaScript avec système de typage statique.
-    link: /typescript/variables
+    link: /typescript/primitives
     icon:
       src: /img/typescript.svg
 

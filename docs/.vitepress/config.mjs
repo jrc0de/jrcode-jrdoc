@@ -17,6 +17,7 @@ export default withMermaid(
           text: "Langages",
           items: [
             { text: "JavaScript", link: "/javascript/variables" },
+            { text: "TypeScript", link: "/typescript/primitives" },
             { text: "HTML", link: "/html/fondamentaux" },
             { text: "CSS", link: "/css/introduction" },
             { text: "SQL", link: "/sql/basiques" },
