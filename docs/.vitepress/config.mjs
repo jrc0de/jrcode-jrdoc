@@ -71,6 +71,16 @@ export default withMermaid(
             ],
           },
         ],
+        "/typescript/": [
+          {
+            text: "TypeScript",
+            items: [
+              { text: "Variables simples", link: "/typescript/variables" },
+              { text: "Tableaux", link: "/typescript/tables" },
+              { text: "Fonctions", link: "/typescript/functions" },
+            ],
+          },
+        ],
         "/html/": [
           {
             text: "HTML",

@@ -18,7 +18,7 @@ features:
 
   - title: TypeScript
     details: Superset du langage JavaScript avec système de typage statique.
-    link: /typescript/index
+    link: /typescript/variables
     icon:
       src: /img/typescript.svg
 
