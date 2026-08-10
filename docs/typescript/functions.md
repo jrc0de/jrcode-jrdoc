@@ -43,3 +43,13 @@ function log(message: string): void {
 
 let result = log("Hello") // result vaut undefined, mais typé void
 ```
+
+## Type _never_
+
+Le type `never` représente le type de retour d'une fonction qui ne se termine jamais normalement : soit elle lève systématiquement une erreur, soit elle contient une boucle infinie. Contrairement à `void`, une fonction typée `never` ne renvoie littéralement aucune valeur, même pas `undefined`.
+
+```ts
+function fail(message: string): never {
+  throw new Error(message)
+}
+```
