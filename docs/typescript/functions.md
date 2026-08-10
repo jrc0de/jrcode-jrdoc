@@ -53,3 +53,25 @@ function fail(message: string): never {
   throw new Error(message)
 }
 ```
+
+## Type _fonction_
+
+On peut typer une variable comme étant elle-même une fonction, en précisant le type de ses paramètres et de son retour.
+
+```ts
+let addition: (a: number, b: number) => number
+
+addition = (a, b) => a + b // OK, TypeScript infère les types de a et b
+```
+
+Cette syntaxe est très utile pour typer un paramètre qui attend lui-même une fonction, comme un callback.
+
+```ts
+function repeter(n: number, action: (index: number) => void) {
+  for (let i = 0; i < n; i++) {
+    action(i)
+  }
+}
+
+repeter(3, (i) => console.log("Itération " + i))
+```
