@@ -38,3 +38,15 @@ let prenom = "Alice" // TypeScript déduit : string
 // Le type est "verrouillé" ensuite même sans annotation explicite
 age = "twenty" // Error [!code error]
 ```
+
+## Types _null_ et _undefined_
+
+JavaScript possède aussi les valeurs `null` et `undefined`, qui ont chacune leur propre type en TypeScript, portant le même nom.
+
+- `undefined` représente une variable déclarée mais non initialisée
+- `null` représente l'absence volontaire de valeur
+
+```ts
+let a: undefined = undefined
+let b: null = null
+```
