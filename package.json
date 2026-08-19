@@ -12,9 +12,8 @@
   },
   "devDependencies": {
     "mermaid": "^11.16.1",
-    "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
-    "tree-node-cli": "^3.0.0",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17"
   }
