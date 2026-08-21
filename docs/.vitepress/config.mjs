@@ -87,6 +87,7 @@ export default withMermaid(
               { text: "Objets", link: "/typescript/objects" },
               { text: "Fonctions", link: "/typescript/functions" },
               { text: "Assertions", link: "/typescript/assertions" },
+              { text: "Compilateur", link: "/typescript/compiler" },
             ],
           },
         ],
