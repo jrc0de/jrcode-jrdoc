@@ -10,6 +10,19 @@ function add(a: number, b = 5) {
 }
 ```
 
+## Paramètres optionnels
+
+Un paramètre peut être rendu optionnel avec `?`, à condition d'être placé après les paramètres obligatoires.
+
+```ts
+function greet(name: string, greeting?: string) {
+  return `${greeting ?? "Bonjour"}, ${name}`
+}
+
+greet("Alice") // OK
+greet("Alice", "Salut") // OK
+```
+
 ## Type _union_
 
 ```ts
