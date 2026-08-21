@@ -1,6 +1,6 @@
 # Visual Studio Code
 
-## Raccourcis utiles
+## Raccourcis généraux
 
 | Raccourci              | Action                                          |
 | ---------------------- | ----------------------------------------------- |
@@ -9,3 +9,9 @@
 | `Tab`                  | Indenter la ligne ou la sélection               |
 | `Shift` + `Tab`        | Désindenter la ligne ou la sélection            |
 | `Ctrl` + `D`           | Sélectionner l'occurrence suivante du mot       |
+
+## Raccourcis JS / TS
+
+| Raccourci           | Action                                                        |
+| ------------------- | ------------------------------------------------------------- |
+| `/**` puis `Entrée` | Générer un bloc de commentaire JSDoc au-dessus d'une fonction |

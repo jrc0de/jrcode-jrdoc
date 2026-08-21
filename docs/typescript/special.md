@@ -12,8 +12,24 @@ data = { name: "Alice" } // OK aussi
 ```
 
 ::: warning Avertissement
-Le type `any` désactive la vérification de type de TypeScript. Cela annule l'intérêt même du langage : les erreurs qu'il devrait détecter à l'écriture du code ne le seront plus. À n'utiliser qu'en dernier recours.
+Cela annule l'intérêt même du langage : les erreurs qu'il devrait détecter à l'écriture du code ne le seront plus. À n'utiliser qu'en dernier recours.
 :::
+
+## Type _unknown_
+
+Le type `unknown` accepte lui aussi n'importe quelle valeur, comme `any`, mais c'est son alternative sûre : contrairement à `any`, TypeScript interdit ensuite d'utiliser cette valeur tant que son type n'a pas été vérifié. Pour pouvoir l'utiliser, il faut d'abord faire du _narrowing_ vers un type précis, par exemple avec `typeof`.
+
+```ts
+let data: unknown = 25
+data = "twenty" // OK, aucune erreur
+data = true // OK aussi
+
+data.toUpperCase() // Error [!code error] — `data` est de type `unknown`
+
+if (typeof data === "string") {
+  data.toUpperCase() // OK, TypeScript sait que `data` est une string ici
+}
+```
 
 ## Type _union_
 
@@ -83,7 +99,7 @@ diceRoll = 7 // Error [!code error]
 ```
 
 ::: tip Astuce
-Le type _literal_ une alternative plus légère au type _enum_ pour représenter un ensemble de valeurs fixes : pas d'objet généré à l'exécution, juste une vérification au niveau du typage.
+Le type _literal_ est une alternative plus légère au type _enum_ pour représenter un ensemble de valeurs fixes : pas d'objet généré à l'exécution, juste une vérification au niveau du typage.
 :::
 
 ## Type _aliases_

@@ -4,14 +4,14 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "verovio": "latest",
+        "verovio": "^6.3.0",
       },
       "devDependencies": {
-        "mermaid": "latest",
-        "oxfmt": "latest",
-        "oxlint": "latest",
-        "vitepress": "latest",
-        "vitepress-plugin-mermaid": "latest",
+        "mermaid": "^11.16.1",
+        "oxfmt": "^0.64.0",
+        "oxlint": "^1.79.0",
+        "vitepress": "^1.6.4",
+        "vitepress-plugin-mermaid": "^2.0.17",
       },
     },
   },
@@ -642,7 +642,7 @@
 
     "uuid": ["uuid@14.0.1", "", { "bin": { "uuid": "dist-node/bin/uuid" } }, "sha512-6ZxzVpzDXDa3bJWaHilVayA+BH/1zmxCJoVgvmqJnid/gPoKHxUrS/aC/T6LGQtNHT+XHG9fXPJB4d+IrU30Ew=="],
 
-    "verovio": ["verovio@6.2.0", "", {}, "sha512-yYU4CAik+ln4tdDOSLJPypQ24fiRsJtNgmgobsPnrSQYxesjwLrrPvth4mumeBRh3S20VERw9+GPXpRyhT1R4A=="],
+    "verovio": ["verovio@6.3.0", "", {}, "sha512-1p6WhP/w3WrAhPVDTNUDH9UVPAZOnHnZVTWxclE8haHccVI/q8c+99vLH6rRgL9MuYaFR9HF4UJD6MyW2CfMwg=="],
 
     "vfile": ["vfile@6.0.3", "", { "dependencies": { "@types/unist": "^3.0.0", "vfile-message": "^4.0.0" } }, "sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q=="],
 

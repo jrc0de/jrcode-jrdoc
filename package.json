@@ -8,7 +8,7 @@
     "lint": "oxlint"
   },
   "dependencies": {
-    "verovio": "^6.2.0"
+    "verovio": "^6.3.0"
   },
   "devDependencies": {
     "mermaid": "^11.16.1",
