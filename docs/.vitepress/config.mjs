@@ -7,6 +7,11 @@ export default withMermaid(
     title: "JRDoc",
     description: "Web dev doc",
     appearance: "force-dark",
+    vite: {
+      optimizeDeps: {
+        include: ["mermaid", "fastdom"],
+      },
+    },
     themeConfig: {
       logo: "/img/rocket.png",
       footer: {
