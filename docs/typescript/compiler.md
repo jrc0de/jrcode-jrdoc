@@ -22,32 +22,34 @@ tsc file.ts # Génère file.js
 
 ## Création du `tsconfig.json`
 
-Le fichier `tsconfig.json` centralise la configuration du compilateur pour tout un projet. Il se crée avec la commande `tsc --init`. Une fois ce fichier présent, la commande `tsc` (sans argument) compile tout le projet selon sa configuration.
+Le fichier `tsconfig.json` centralise la configuration du compilateur pour tout un projet. Il se crée avec la commande `tsc --init`. Une fois ce fichier présent, la commande `tsc` (sans argument) compile tout le projet selon sa configuration dont nous allons étudier les options.
 
-## Configuration du `tsconfig.json`
+::: tip Astuce
+Ajouter `--watch` à la commande `tsc` pour surveiller les fichiers et recompiler automatiquement à chaque modification.
+:::
 
-### Langage et environnement
+## Options de langage et d'environnement
 
 | Option   | Description                                                                                                                                                                                                                          |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `target` | Version d'ECMAScript vers laquelle TypeScript compile le code (`ES2020`, `ES2022`, `ESNext`...). Plus la valeur est récente, plus le code généré peut utiliser des fonctionnalités JS modernes, au prix d'une compatibilité moindre. |
 | `lib`    | Liste les bibliothèques de définitions de types à inclure en plus de celles disponibles par défaut.                                                                                                                                  |
 
-### Modules
+## Options des modules
 
 | Option    | Description                                                                                                                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `module`  | Définit quel système d'import/export TypeScript utilise dans le fichier `.js` généré (`CommonJS`, `ESNext`, `NodeNext`...). Doit être cohérent avec l'environnement d'exécution (Node.js, navigateur, bundler...). |
 | `rootDir` | Dossier racine des fichiers sources `.ts`. Sert de référence pour reconstituer l'arborescence des fichiers compilés dans `outDir`.                                                                                 |
 
-### Support du JavaScript
+## Options du JavaScript
 
 | Option    | Description                                                                                                                                      |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `allowJs` | Autorise l'inclusion de fichiers `.js` dans la compilation, en plus des fichiers `.ts`. Utile pour migrer progressivement un projet JS vers TS.  |
 | `checkJs` | Active la vérification de types sur les fichiers `.js` (nécessite `allowJs`). Permet de détecter des erreurs dans du JS sans le convertir en TS. |
 
-### Émission
+## Options d'émission
 
 | Option           | Description                                                                                                                                                                               |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +59,7 @@ Le fichier `tsconfig.json` centralise la configuration du compilateur pour tout 
 | `noEmit`         | Empêche `tsc` de générer des fichiers de sortie. Utile pour utiliser TypeScript uniquement comme vérificateur de types (par exemple avec Bun ou un bundler qui gère déjà la compilation). |
 | `noEmitOnError`  | Empêche la génération des fichiers de sortie si une erreur de type est détectée.                                                                                                          |
 
-## Vérification de type
+## Options de vérification
 
 | Option                       | Description                                                                                                                                             |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
