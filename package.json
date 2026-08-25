@@ -11,9 +11,9 @@
     "verovio": "^6.3.0"
   },
   "devDependencies": {
-    "mermaid": "^11.17.0",
-    "oxfmt": "^0.64.0",
-    "oxlint": "^1.79.0",
+    "mermaid": "^11.17.2",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17"
   }

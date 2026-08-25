@@ -59,6 +59,41 @@ const pseudo = user.pseudo || "Anonyme"
 isConnected && afficherMenu()
 ```
 
+## Opérateur de coalescence des nuls
+
+L'opérateur de coalescence des nuls `??` ressemble à `||`, mais il ne renvoie la valeur de droite que si celle de gauche est `null` ou `undefined` et non pas pour toutes les valeurs _falsy_ comme `0`, `''` ou `false`.
+
+```js
+console.log(0 || "default") // 'default' (0 est falsy)
+console.log(0 ?? "default") // 0 (0 n'est ni null ni undefined)
+```
+
+## Opérateurs d'assignation logique
+
+Ces opérateurs combinent un opérateur logique avec une assignation : ils n'assignent une nouvelle valeur à la variable que si une certaine condition est remplie.
+
+- L'operateur d'assignement _OU_ : `||=` assigne la valeur de droite uniquement si la variable est **falsy**.
+- L'operateur d'assignement _ET_ : `&&=` assigne la valeur de droite uniquement si la variable est **truthy**.
+- L'operateur d'assignement _coalescence des nuls_ : `??=` assigne la valeur de droite uniquement si la variable est `null` ou `undefined`.
+
+```js
+// ||= : la variable est truthy → pas d'assignation
+let score = 42
+score ||= 100 // reste 42
+```
+
+```js
+// &&= : la variable est truthy → assignation
+let pseudo = "Bob"
+pseudo &&= "Modéré" // 'Modéré' (car "Bob" est truthy)
+```
+
+```js
+// ??= : la variable est null/undefined → assignation
+let message
+message ??= "Anonyme" // 'Anonyme'
+```
+
 ## Opérateur _spread_
 
 L'opérateur de décomposition (_spread operator_) permet de **copier**, **fusionner** ou **étendre** des tableaux et des objets en JavaScript. Il s’écrit avec trois points : `...`.
