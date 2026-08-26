@@ -94,6 +94,26 @@ let message
 message ??= "Anonyme" // 'Anonyme'
 ```
 
+## Chaînage optionnel
+
+L'opérateur de chaînage optionnel `?.` permet d'accéder à une propriété, une méthode, ou un élément d'un objet potentiellement `null` ou `undefined`, sans provoquer d'erreur. Avec `?.`, si la valeur de gauche est `null` ou `undefined`, l'expression s'arrête immédiatement et renvoie `undefined`. Il fonctionne aussi avec des méthodes et des tableaux.
+
+```js
+const user = null
+
+console.log(user?.name) // undefined (pas d'erreur)
+
+user?.getFullName() // n'appelle la méthode que si user existe
+
+arr?.[0] // accède à l'index 0 seulement si arr existe
+```
+
+Il se combine très souvent avec `??` pour fournir une valeur par défaut :
+
+```js
+const pseudo = user?.profile?.pseudo ?? "Anonyme"
+```
+
 ## Opérateur _spread_
 
 L'opérateur de décomposition (_spread operator_) permet de **copier**, **fusionner** ou **étendre** des tableaux et des objets en JavaScript. Il s’écrit avec trois points : `...`.
