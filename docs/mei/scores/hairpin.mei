@@ -2,9 +2,9 @@
     <meiHead>
         <fileDesc>
             <titleStmt>
-                <title />
+                <title></title>
             </titleStmt>
-            <pubStmt />
+            <pubStmt></pubStmt>
         </fileDesc>
     </meiHead>
     <music>
@@ -13,18 +13,20 @@
                 <score>
                     <scoreDef>
                         <staffGrp>
-                            <staffDef clef.shape="G" clef.line="2" n="1" lines="5" />
+                            <staffDef n="1" lines="5" clef.shape="G" clef.line="2" />
                         </staffGrp>
                     </scoreDef>
                     <section>
                         <measure>
                             <staff n="1">
                                 <layer>
-                                    <note pname="c" oct="4" dur="4" />
-                                    <rest ploc="b" oloc="4" dur="4" />
-                                    <note pname="e" oct="4" dur="2" />
+                                    <note xml:id="n1" pname="a" oct="4" dur="4" />
+                                    <note xml:id="n2" pname="g" oct="4" dur="4" />
+                                    <note xml:id="n3" pname="f" oct="4" dur="4" />
+                                    <note xml:id="n4" pname="e" oct="4" dur="4" />
                                 </layer>
                             </staff>
+                            <hairpin form="dim" startid="#n1" endid="#n4" place="below" />
                         </measure>
                     </section>
                 </score>

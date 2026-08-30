@@ -5,16 +5,22 @@
     "preview": "vitepress preview docs",
     "start": "vitepress preview docs --port $PORT --host",
     "fmt": "oxfmt",
-    "lint": "oxlint"
+    "lint": "oxlint",
+    "knip": "knip"
   },
   "dependencies": {
     "verovio": "^6.3.0"
   },
   "devDependencies": {
+    "@types/node": "^26.4.0",
     "mermaid": "^11.17.2",
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0",
+    "typescript": "^7.0.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "engines": {
+    "bun": "1.4"
   }
 }

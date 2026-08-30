@@ -96,6 +96,16 @@ Un mélisme se produit lorsqu'une seule syllabe est chantée sur plusieurs notes
   <MeiViewer :meiContent="melisme" />
 </ClientOnly>
 
+Par défaut, Verovio calcule automatiquement la direction et la courbure de la liaison. Il est toutefois possible de les contrôler manuellement :
+
+- `@curvedir` force l'orientation générale de la courbe (`above` ou `below`) ;
+- `@bulge` ajuste sa forme via une ou plusieurs paires de valeurs [déviation position] : la déviation est exprimée en unités virtuelles (correspondant à la moitié de l'espacement entre deux lignes de la portée) par rapport à la ligne droite reliant le début et la fin de la liaison, et la position est exprimée en pourcentage de la longueur totale de la liaison (0 à 100).
+
+```xml
+<slur startid="#n1" endid="#n2" curvedir="below"/>
+<slur startid="#n3" endid="#n4" bulge="2 50"/> <!-- dévie de 2 unités virtuelles au milieu de la liaison -->
+```
+
 <script setup>
 import lyric1 from './scores/lyric1.mei?raw'
 import tiret from './scores/tiret.mei?raw'
