@@ -24,8 +24,9 @@ Une note est représentée par l'élément `<note>`, dont les attributs principa
 | `@artic`        | Articulation                         | `acc` (accent), `stacc` (staccato), `ten` (tenuto), `marc` (marcato)                 |
 | `@cue`          | Note de petite taille                | `true`, `false`                                                                      |
 | `@dots`         | Nombre de points d'augmentation      | `0`, `1`, `2`, `3`                                                                   |
+| `@dots.ges`     | Augmentation affichée                | Même syntaxe que `@dots`                                                             |
 | `@dur`          | Durée de la note                     | `breve`, `1` (ronde), `2` (blanche), `4` (noire), `8` (croche), `16` (double-croche) |
-| `@dur.ges`      | Durée gestuelle (réelle)             | Même syntaxe que `@dur`                                                              |
+| `@dur.ges`      | Durée affichée                       | Même syntaxe que `@dur`                                                              |
 | `@fermata`      | Point d'orgue                        | `above` (au-dessus), `below` (en dessous)                                            |
 | `@head.visible` | Affichage de la tête de note         | `true`, `false`                                                                      |
 | `@n`            | Numéro de note                       | Texte libre (type `1`, `2`, `3`)                                                     |

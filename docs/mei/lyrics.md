@@ -106,6 +106,45 @@ Par défaut, Verovio calcule automatiquement la direction et la courbure de la l
 <slur startid="#n3" endid="#n4" bulge="2 50"/> <!-- dévie de 2 unités virtuelles au milieu de la liaison -->
 ```
 
+## Liaison de prolongation
+
+Contrairement au `<slur>`, qui exprime une liaison de phrasé entre des notes éventuellement différentes, une liaison de prolongation (`<tie>`) relie deux notes de même hauteur.
+
+Elle peut être encodée de deux manières directement avec l'attribut `@tie` sur les notes :
+
+- `i` (_initial_) indique le début de la liaison ;
+- `m` (_medial_) indique une note située au milieu d'une chaîne de liaisons ;
+- `t` (_terminal_) indique la fin de la liaison.
+
+```xml
+<measure n="1">
+    <staff n="1">
+        <layer n="1">
+            <note dur="4" oct="4" pname="c" tie="i"/> <!-- [!code highlight] -->
+            <note dur="4" oct="4" pname="c" tie="t"/> <!-- [!code highlight] -->
+            <note dur="4" oct="4" pname="d"/>
+            <note dur="4" oct="4" pname="e"/>
+        </layer>
+    </staff>
+</measure>
+```
+
+Une autre possibilité consiste à déclarer explicitement la liaison à l'aide de l'élément `<tie>`. Les deux notes sont alors identifiées avec `xml:id`, puis reliées grâce aux attributs `@startid` et `@endid`.
+
+```xml
+<measure n="2">
+    <staff n="1">
+        <layer n="1">
+            <note xml:id="n2a" dur="4" oct="4" pname="c"/>
+            <note xml:id="n2b" dur="4" oct="4" pname="c"/>
+            <note dur="4" oct="4" pname="d"/>
+            <note dur="4" oct="4" pname="e"/>
+        </layer>
+    </staff>
+    <tie startid="#n2a" endid="#n2b"/> <!-- [!code highlight] -->
+</measure>
+```
+
 <script setup>
 import lyric1 from './scores/lyric1.mei?raw'
 import tiret from './scores/tiret.mei?raw'
