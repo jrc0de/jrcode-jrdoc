@@ -51,17 +51,11 @@ features:
     icon:
       src: /img/bun.svg
 
-  - title: Vue.js
+  - title: Vue
     details: Framework JavaScript évolutif pour construire des interfaces utilisateur.
     link: /vue/structure
     icon:
       src: /img/vue.svg
-
-  - title: Ionic
-    details: Écosystème web pour apps mobiles multiplateformes.
-    link: /ionic/ionic
-    icon:
-      src: /img/ionic.svg
 
   - title: Git
     details: Gestionnaire de versions distribué.

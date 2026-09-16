@@ -32,10 +32,7 @@ export default withMermaid(
         },
         {
           text: "Frameworks",
-          items: [
-            { text: "Vue.js", link: "/vue/templating" },
-            { text: "Ionic", link: "/ionic/ionic" },
-          ],
+          items: [{ text: "Vue", link: "/vue/structure" }],
         },
         {
           text: "Outils",
@@ -128,15 +125,6 @@ export default withMermaid(
               { text: "Synchronisation", link: "/git/sync" },
               { text: "Supressions", link: "/git/delete" },
               { text: "Branches", link: "/git/branch" },
-            ],
-          },
-        ],
-        "/ionic/": [
-          {
-            text: "Ionic",
-            items: [
-              { text: "Ionic framework", link: "/ionic/ionic" },
-              { text: "Capacitor", link: "/ionic/capacitor" },
             ],
           },
         ],
