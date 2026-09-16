@@ -1,8 +1,6 @@
-# Markdown
+# Syntaxe de base
 
-## Syntaxe de base
-
-### Paragraphes
+## Paragraphes
 
 Séparer deux paragraphes par une **ligne vide**.
 
@@ -12,7 +10,7 @@ Mon premier paragraphe.
 Mon second paragraphe, séparé par une ligne vide.
 ```
 
-### Titres
+## Titres
 
 ```markdown
 # Titre niveau 1
@@ -28,7 +26,7 @@ Mon second paragraphe, séparé par une ligne vide.
 ###### Titre niveau 6
 ```
 
-### Emphase
+## Emphase
 
 ```markdown
 _italique_ ou _italique_
@@ -36,7 +34,7 @@ _italique_ ou _italique_
 **_gras et italique_**
 ```
 
-### Listes non-ordonnées :
+## Listes non-ordonnées
 
 ```markdown
 - Item 1
@@ -44,33 +42,33 @@ _italique_ ou _italique_
   - Sous-élément
 ```
 
-### Listes ordonnées :
+## Listes ordonnées
 
 ```markdown
 1. Premier point
 2. Deuxième point
 ```
 
-### Citations
+## Citations
 
 ```markdown
 > Ceci est une citation
 > qui peut s'étendre sur plusieurs lignes.
 ```
 
-### Séparateur horizontal
+## Séparateur horizontal
 
 ```markdown
 ---
 ```
 
-### Code inline :
+## Code inline
 
 ```markdown
 `maVariable`
 ```
 
-### Bloc de code avec coloration syntaxique :
+## Bloc de code avec coloration syntaxique
 
 ````markdown
 ```javascript
@@ -79,13 +77,13 @@ console.log(hello)
 ```
 ````
 
-### Liens simples :
+## Liens simples
 
 ```markdown
 [Texte du lien](https://example.com)
 ```
 
-### Lien par référence (style notes de bas de page) :
+## Notes de bas de page
 
 ```markdown
 Visiter mon [site][1]
@@ -93,37 +91,22 @@ Visiter mon [site][1]
 [1]: https://monsite.fr
 ```
 
-### Images
+## Images
 
 ```markdown
 ![Texte alternatif](chemin/vers/image.png)
 ```
 
-## Syntaxe avancée
+## Image avec titre
 
-::: tip GitHub Flavored Markdown (GFM)
-Ces fonctionnalités ne sont pas disponibles dans tous les parseurs.
-Utiliser un outil supportant GFM (GitHub, Marked, Markdown-it...).
-:::
-
-### Liens automatiques
-
-Coller une URL directement dans le texte la rend cliquable automatiquement.
+Un troisième argument optionnel, entre guillemets, ajoute un attribut `title` à l'image.
 
 ```markdown
-https://example.com
+![Texte alternatif](chemin/vers/image.png "Légende de l'image")
 ```
 
-### Texte barré
+Génère :
 
-```markdown
-~~texte barré~~
-```
-
-### Tableaux
-
-```markdown
-| Colonne 1 | Colonne 2 |
-| --------- | --------- |
-| Valeur 1  | Valeur 2  |
+```html
+<img src="chemin/vers/image.png" alt="Texte alternatif" title="Légende de l'image" />
 ```

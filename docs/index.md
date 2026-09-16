@@ -35,13 +35,13 @@ features:
 
   - title: SQL
     details: Langage de requêtes pour bases de données relationnelles.
-    link: /sql/basiques
+    link: /sql/basic
     icon:
       src: /img/postgresql.svg
 
   - title: Markdown
     details: Langage de balisage léger pour rédiger du contenu textuel.
-    link: /markdown
+    link: /markdown/basic
     icon:
       src: /img/markdown.png
 

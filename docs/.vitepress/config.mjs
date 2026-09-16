@@ -26,7 +26,7 @@ export default withMermaid(
             { text: "HTML", link: "/html/fondamentaux" },
             { text: "CSS", link: "/css/introduction" },
             { text: "SQL", link: "/sql/basiques" },
-            { text: "Markdown", link: "/markdown" },
+            { text: "Markdown", link: "/markdown/basic" },
             { text: "MEI", link: "/mei/introduction" },
           ],
         },
@@ -98,6 +98,15 @@ export default withMermaid(
             ],
           },
         ],
+        "/markdown/": [
+          {
+            text: "Markdown",
+            items: [
+              { text: "Syntaxe de base", link: "/markdown/basic" },
+              { text: "Syntaxe avancée", link: "/markdown/advanced" },
+            ],
+          },
+        ],
         "/css/": [
           {
             text: "CSS",
@@ -112,7 +121,7 @@ export default withMermaid(
           {
             text: "SQL",
             items: [
-              { text: "Basiques", link: "/sql/basiques" },
+              { text: "Basiques", link: "/sql/basic" },
               { text: "Types de données", link: "/sql/types" },
             ],
           },
