@@ -7,6 +7,7 @@ export default withMermaid(
     title: "JRDoc",
     description: "Web dev doc",
     appearance: "force-dark",
+    lastUpdated: true,
     vite: {
       optimizeDeps: {
         include: ["mermaid", "fastdom"],
@@ -16,6 +17,12 @@ export default withMermaid(
       logo: "/img/rocket.png",
       footer: {
         copyright: "© 2026 ⚡ JRCode",
+      },
+      lastUpdated: {
+        text: "Mis à jour le",
+        formatOptions: {
+          dateStyle: "short",
+        },
       },
       nav: [
         {
