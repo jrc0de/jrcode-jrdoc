@@ -36,6 +36,7 @@ Le nom du package installé n'est pas toujours celui de la commande qu'il expose
 
 - `bun [script.js]` : exécuter un script
 - `bunx [package]` : exécuter un package sans l'installer
+- `bunx serve` : lancer un serveur statique local
 
 ## Sécurité
 
