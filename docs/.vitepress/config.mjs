@@ -31,10 +31,6 @@ export default withMermaid(
           ],
         },
         {
-          text: "Frameworks",
-          items: [{ text: "Vue", link: "/vue/structure" }],
-        },
-        {
           text: "Outils",
           items: [
             { text: "Bun", link: "/bun" },
@@ -147,15 +143,6 @@ export default withMermaid(
               { text: "Notes et durées", link: "/mei/notes" },
               { text: "Paroles", link: "/mei/lyrics" },
               { text: "Mise en page", link: "/mei/layout" },
-            ],
-          },
-        ],
-        "/vue/": [
-          {
-            text: "Vue.js",
-            items: [
-              { text: "Structure d'un projet", link: "/vue/structure" },
-              { text: "Syntaxe de template", link: "/vue/templating" },
             ],
           },
         ],

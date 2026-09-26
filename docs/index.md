@@ -51,12 +51,6 @@ features:
     icon:
       src: /img/bun.svg
 
-  - title: Vue
-    details: Framework JavaScript évolutif pour construire des interfaces utilisateur.
-    link: /vue/structure
-    icon:
-      src: /img/vue.svg
-
   - title: Git
     details: Gestionnaire de versions distribué.
     link: /git/starting
